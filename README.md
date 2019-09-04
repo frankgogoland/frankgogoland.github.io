@@ -1,0 +1,2 @@
+# frankgogoland.github.io
+blog
