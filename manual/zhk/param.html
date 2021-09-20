@@ -1,0 +1,808 @@
+<html>
+
+<head>
+  <title>Evernote Export</title>
+  <basefont face="微软雅黑" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="YXBJ Windows/602562 (zh-CN, DDL); Windows/10.0.0 (Win64); EDAMVersion=V2;" />
+  <style>
+    body,
+    td {
+      font-family: 微软雅黑;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+
+<body>
+  <a name="1104" />
+
+  <div>
+    <span>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">一、参数解释</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"></div>
+      <div style="background-color: rgb(255, 255, 255);">
+        <font style="font-size: 14pt; color: rgb(65, 173, 28);"><b><span
+              style="color: rgb(65, 173, 28); font-size: 14pt; font-family: &quot;Courier New&quot;, monospace;">【</span><span
+              style="color: rgb(65, 173, 28); font-size: 14pt; font-family: Consolas, monospace;">LTE</span><span
+              style="color: rgb(65, 173, 28); font-size: 14pt; font-family: &quot;Courier New&quot;, monospace;">】</span></b>
+        </font>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">EARFCN -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">频点</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">BAND -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">频段</span>
+      </div>
+      <div style="font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">PCI -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">物理小区识别码，右上角数字代表模三后的值</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RSRP -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">参考信号接收功率</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RSRQ -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">参考信号接收质量</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">SINR -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">信号与干扰加噪声比</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">PRI -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">小区优先级</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">P -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">主小区</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">S -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">副载波小区（如果基站开通了载波聚合）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">N -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">邻区</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">MCC/MNC-</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">国家代码网络代码</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Operator-</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">运营商</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">CP Type -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">循环前缀类型（分普通和扩展</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">2</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">种）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Duplex Mode -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">双工模式（分</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">TDD,FDD 2</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">种）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">TAC -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">路由区跟踪码</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">ECI -</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">基站标识（有</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">eNodeb</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">和</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">cell id</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">组成）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">BandWidth-</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">带宽（</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">LTE</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">最大</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">20MHz</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">）</span></div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Frequency-</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">频率</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Antenana Tx/Rx -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">基站收发天线数目</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Timging advance-</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">时间提前量（和当前基站的距离）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">CA Active Status
+          -</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">载波聚合活动状态</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">P-a - PDSCH</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">功率调整参数</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">A</span></div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">P-b - PDSCH</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">功率调整参数</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">B</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">，通常在</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">SIB2</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">配置</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">PRACH Txpower -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">随机接入信道发送功率</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">PUSCH Txpower -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">上下共享信道发送功率（上传功率）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Rank Indicator -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">秩指示</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Transmission Mode -</span>
+        <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">传输模式（不同传输模式和层数有关系）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">CQI -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">信道质量指示</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Pathloss-</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">路径耗损（设备到基站）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">TDD Configuration -
+          TDD</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">帧与特殊子帧配置</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">TDD UL/DL Configuration -
+          TDD</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">上下行切换周期</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">MCS -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">编码调制方案（</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">0-31</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">）</span></div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RBs -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">传输资源块数量（</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">0-100</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">）</span></div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">QPSK -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">正交相移键控（调制方式）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">16QAM - 16</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">种符号的正交幅度调制（调制方式）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">64QAM - 64</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">种符号的正交幅度调制（调制方式）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">256QAM - 256</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">种符号的正交幅度调制（调制方式）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">BLER -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">误块率</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">APN -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">存取接入点</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">PDN IP -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">数据包网络</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">IP</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">地址</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">QCI -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">服务质量（</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">QoS</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">）级别</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">AMBR DL -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">签约用户最大下行速率</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">AMBR UL -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">签约用户最大上行速率</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">APP Tput -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">应用层速率</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">PDCP Tput - PDCP</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">（分组数据汇聚协议层）速率</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RLC Tput - RLC</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">（无线链路层）速率</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">MAC Tput - MAC</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">（媒体接入层）速率</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">PHY Tput - PHY</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">（物理层）速率</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Modulation -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">调制方式</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RACH -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">随机接入</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">C_RNTI -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">小区无线网络临时标识（</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RRC</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">连接态下有效）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RA-RNTI -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">随机接入临时标识</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RACH Procedure type-</span>
+        <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">随机接入过程类型（基于竞争的还是自由模式）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RACH Procedure mode -</span>
+        <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">随机接入原因</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255);"><span
+          style="font-family: &quot;Courier New&quot;, monospace; color: rgb(65, 173, 28); font-size: 14pt;"><b>【高清语言】</b></span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RTP -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">实时传输协议</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RTP Response Status Code
+          -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">响应码</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RTP Direction -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">传输方向（上行，下行）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RTP Sequence Number -</span>
+        <span style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">序列号</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RTP Timestamp -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">时间戳</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RTP Source SSRC -</span>
+        <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">源同步标识</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RTP Loss Type -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">丢包类型</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RTP Loss Rate -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">丢包率</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RTP Throughput -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">吞吐率</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RTP Codec Type -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">编码类型</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RTP Media Type -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">媒体类型</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RTP Audio CMR -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">音频编码方式</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RTP Audio Frame Content
+          -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">音频帧大小</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RTP Loss Num -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">丢包数量</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RTP Payload size-</span>
+        <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">承载内容大小</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">ROHC Enabled -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">是否支持头部压缩</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><b><span
+            style="font-size: 14pt; color: rgb(65, 173, 28);; font-family: &quot;Courier New&quot;, monospace;">【NR】</span></b>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">ARFCN -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">频点</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">BEAM -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">波束赋型</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">S -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">服务小区</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">N -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">邻区</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">5G State - 5G</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">接入是否受限制（指得设备）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">5G Available -5G</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">网络是否存在</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RRC State RRC -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">状态，初始化，空闲，连接等</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Connectivity Mode -</span>
+        <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">连接模式：</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">SA/NSA</span></div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">gNodeB/CellId -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">基站和小区编号</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">ServingCellIndex -</span>
+        <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">服务小区索引编号</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">PointA Arfcn - POINT A</span>
+        <span style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">频点</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Numerology -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">子载波间隔类型（</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">0</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">，</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">1</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">，</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">2</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">，</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">3</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">，</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">4</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">）</span></div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">SubCarrierSpacing -</span>
+        <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">子载波带宽（</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">15</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">，</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">30</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">，</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">60</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">，</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">120</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">，</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">240</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">）</span></div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Q Rxlev Min -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">驻留在该小区的最小接收电平（需要换算）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">LocationAndBandWidth -
+          BWP</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">的频域位置和带宽</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">SSB Arfcn/Freq DL -
+          SSB</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">的频点和频率</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Band/BandWidth DL -</span>
+        <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">频段及带宽</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Center Arfcn/Freq DL -</span>
+        <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">中心频点及下行频率</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">SSB GSCN SSB -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">绝对频域位置</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">SSB Beam Index -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">服务小区当前波束索引</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">SubCarrierOffset - SSB</span>
+        <span style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">与</span>
+        <span style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Point A</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">的偏移</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">SS RSRP - SSB</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">电平值</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">SS RSRQ - SSB</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">参考信号质量</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">SS SINR - SSB</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">信噪比</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">PUSCH TXPOWER -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">上行共享数据信道传输功率</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">PUCCH TXPOWER -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">上行控制信道传输功率</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">PRACH TXPOWER -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">随机接入信道传输功率</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">MM STATE -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">移动性管理状态（</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">NAS</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">层），分注册和去注册</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">2</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">个状态</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">MM SUB STATE -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">移动性管理子状态（</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">NAS</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">层）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">AMF IDENTIY -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">接入和移动性管理标识</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">,</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">属于</span>
+        <span style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RAN</span></div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">5G TMSI - 5G</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">临时识别码</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">DNN -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">同</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">APN,</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">接入点编号</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RACH REASON -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">随机接入的原因（连接请求、切换，上行数据到达）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RACH CONTENTION -</span>
+        <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">随机接入竞争类型（</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">FREE,DL MCE,UL GRANT,PDCCH
+          C-RNTI</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">）</span></div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">PRACH CONFIG -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">随机接入配置</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">SSB ID -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">发起随机接入的</span>
+        <span style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">BEAM</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">索引</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RACH PREAMBLE FORMAT - MSG1
+          PREAMBLE FORMAT(0,1,2,3,A1,A2,A3…)</span></div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RACH LOGICAL ROOT INDEX
+          -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">根序列索引</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RACH RA RNTI -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">随机接入临时码</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RACH ACCESS RESULT -</span>
+        <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">随机接入结果</span>
+      </div>
+      <div
+        style="background-color:rgb(255, 255, 255);color:rgb(8, 8, 8);font-family:&quot;Courier New&quot;, monospace;font-size:9.8pt;">
+      </div>
+      <div style="background-color: rgb(255, 255, 255);">
+        <font style="font-size: 14pt;"><b><span
+              style="color: rgb(65, 173, 28); font-size: 14pt; font-family: &quot;Courier New&quot;, monospace;">【</span><span
+              style="color: rgb(65, 173, 28); font-size: 14pt; font-family: Consolas, monospace;">GSM</span><span
+              style="color: rgb(65, 173, 28); font-size: 14pt; font-family: &quot;Courier New&quot;, monospace;">】</span></b>
+        </font>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">LAC -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">位置区码</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">CI -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">小区编码</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">BCCH -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">广播信道</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">BSIC -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">基站识别码</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">C1 -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">小区选择和重选参数</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">1</span></div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">C2 -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">小区选择和重选参数</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">2</span></div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RxLev -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">接收电平值</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">S -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">服务小区</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">N -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">邻小区</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RxLevBCCH -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">广播信道接收电平</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">DTX -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">非连续传输模式</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RxLevFul -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">接收信号强度</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RxLevSub -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">接收信号强度（开通</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">DTX</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">）</span></div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RxQualFul -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">通话质量</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RxQualSub -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">通话质量（开通</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">DTX</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">）</span></div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">TCH ARFCN -</span><span
+          style="font-size: 9.8pt;"> 业务</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">信道频点</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">TCH C/I -</span><span
+          style="font-size: 9.8pt;"> 业务</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">信道载干比</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RLT Value -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">无线链路超时值</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Channel Mode -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">信道模式</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Hopping Mode -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">跳频模式（是否支持）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Hopping List -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">调频列表</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">HSN -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">跳频序列号</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">MAIO -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">移动分配索引偏置</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Speech Codec DL -</span>
+        <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">下行语言编码</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Speech Codec UL -</span>
+        <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">上行语言编码</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">LLC -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">逻辑链路控制</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RLC -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">无线链路控制</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">MAC -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">媒体接入控制</span>
+      </div>
+      <div
+        style="background-color:rgb(255, 255, 255);color:rgb(8, 8, 8);font-family:&quot;Courier New&quot;, monospace;font-size:9.8pt;">
+      </div>
+      <div style="background-color: rgb(255, 255, 255);">
+        <font style="font-size: 14pt;"><b><span
+              style="color: rgb(65, 173, 28); font-size: 14pt; font-family: &quot;Courier New&quot;, monospace;">【</span><span
+              style="color: rgb(65, 173, 28); font-size: 14pt; font-family: Consolas, monospace;">WCDMA</span><span
+              style="color: rgb(65, 173, 28); font-size: 14pt; font-family: &quot;Courier New&quot;, monospace;">】</span></b>
+        </font>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">UTRAN - UMTS</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">无线接入网</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Carrier -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">载波（主载波，副载波）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Cell -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">小区类型（活动集，监测集和候选集）</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">UARFCN -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">频点</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">SC -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">扰码</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RSCP -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">导频信道信号强度</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">URA - UTRAN</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">注册区域</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">PSC -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">主扰码</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RSSI -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">接收信号强度指示</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">EC/IO -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">接收信号的强度和邻小区干扰水平的比值</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">ActiveSet -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">活动集</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">MonitorSet -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">监测集</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">DedicateSet-</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">候选集</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">RRC State -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">无线资源控制</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">SIR -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">信号噪声比</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">PCA -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">功率控制算法</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">TPC Step size -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">传输功率控制步长大小</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">AICH Timing -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">采集指示信道时延</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Preamble Offset -</span>
+        <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">前导码偏移量</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">Preamble Count -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">前导码数量</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">GMM State - GPRS</span><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">移动性管理</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">MM State -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">移动性管理状态</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">TB Size -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">传输块大小</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">PDU -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">协议数据单元</span>
+      </div>
+      <div style="background-color: rgb(255, 255, 255); font-size: 9.8pt;"><span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: Consolas, monospace;">SDU -</span> <span
+          style="font-size: 9.8pt; color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace;">服务数据单元</span>
+      </div>
+      <div
+        style="background-color:rgb(255, 255, 255);color:rgb(8, 8, 8);font-family:&quot;Courier New&quot;, monospace;font-size:9.8pt;">
+      </div>
+      <div
+        style="background-color:rgb(255, 255, 255);color:rgb(8, 8, 8);font-family:&quot;Courier New&quot;, monospace;font-size:9.8pt;">
+      </div>
+      <div
+        style="background-color:rgb(255, 255, 255);color:rgb(8, 8, 8);font-family:&quot;Courier New&quot;, monospace;font-size:9.8pt;">
+      </div>
+      <div style="color: rgb(8, 8, 8); font-family: &quot;Courier New&quot;, monospace; font-size: 9.8pt;"></div>
+    </span>
+  </div>
+</body>
+
+</html> 
