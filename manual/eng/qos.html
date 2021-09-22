@@ -1,0 +1,206 @@
+<html>
+
+<head>
+  <title>Evernote Export</title>
+  <basefont face="Calibri" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="YXBJ Windows/602562 (zh-CN, DDL); Windows/10.0.0 (Win64); EDAMVersion=V2;" />
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+  <style>
+    body {
+
+      background-color: rgb(235, 224, 202);
+
+    }
+
+    td {
+      font-family: Calibri;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+
+<body>
+  <a name="826" />
+
+  <div>
+    <span>
+      <div>
+        <div><span style="font-size: 16pt; font-weight: bold;">Frequently Asked Questions (Q&A)</span></div>
+        <h2><span style="font-size: 14pt; color: rgb(50, 135, 18);">1. Equipment requirements</span></h2>
+        <div
+          style="box-sizing: border-box; padding-left: 19px; padding-top: 6px; padding-bottom: 6px; border-left: 0px solid #b4c0cc; background-position: initial initial; background-repeat: initial initial; margin-top: 6px; --en-blockquote: true;">
+          <div><span style="font-size: 11pt;">1.1 The system is at least Android 5.0 or higher.</span></div>
+          <p></p>
+          <div><span style="font-size: 11pt;">1.2 To lock the GSM and WCDMA functions, you need to turn on the switch in the system settings. When the network is in GSM or WCDMA, the frequency lock information will be displayed automatically.</span></div>
+          <p></p>
+          <div><span style="font-size: 11pt;">1.3 Frequency lock, network lock, signaling and more physical layer parameters require Qualcomm chipset, and can be output normally after ROOT.</span></div>
+          <p></p>
+          <div><span style="font-size: 11pt;">1.4 Huawei and other chips can use the test function without affecting the configuration test plan and task execution function. The file format can be CSV.</span></div>
+          <p></p>
+          <div><span style="font-size: 11pt;">1.5 Early mobile phones such as S7, MI6 and other devices that do not support dual 4G, sometimes there is a phenomenon that the lock frequency band falls back to 2G, but the frequency lock point is normal.</span></div>
+          <p></p>
+          <div><span style="font-size: 11pt;">1.6 If the frequency band exists, it will fall back to 2G after being locked. At this time, you can re-check the "4G" button to lock the network to force it to enter 4G mode.</span></div>
+        </div>
+        <div> 
+            <img src="img/Image.png" type="image/png" data-filename="Image.png" /></div>
+        <div><br /></div>
+        <div><br /></div>
+        <h2><span style="font-size: 14pt; color: rgb(50, 135, 18);">2. Which network locks are supported</span></h2>
+        <div><span style="font-size: 11pt;"> 
+            <ul>
+              <li>
+                <div style="margin-bottom: 1em;-en-paragraph:true;font-size: 11pt;">GSM lock frequency band.</div>
+              </li>
+              <li>
+                <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;font-size: 11pt;">WCDMA lock frequency band and uarfcn.</div>
+              </li>
+              <li>
+                <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;font-size: 11pt;">LTE lock frequency band, PCI, Eafcn.</div>
+              </li>
+              <li>
+                <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;font-size: 11pt;">NR lock frequency band, PCI, Arfcn.</div>
+              </li>
+              </ul>
+             </span>
+        </div>
+        <div><span style="font-size: 11pt;"><br /></span></div>
+        <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"></div>
+        <h2><span style="font-size: 14pt; color: rgb(50, 135, 18);">3. How to know which LTE frequency bands are currently supported by the device</span></h2>
+        <div><span style="font-size: 11pt;">      You can see the list of supported devices on the "Devices" page, and select the lock on the right after checking.</span><span style="font-size: 11pt;"><img
+              src="img/Image1.png" type="image/png" data-filename="Image.png" /></span></div>
+        <div><span style="font-size: 11pt;">  
+            <img src="img/Image2.png" type="image/png" data-filename="Image.png" /></span></div>
+        <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span style="font-size: 18pt;"> </span> 
+        </div>
+        <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"></div>
+        <h2><span style="font-size: 14pt; color: rgb(50, 135, 18);">4. What to do if the list shows that it is loading</span></h2>
+        <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span style="font-size: 11pt;">   
+            Confirm whether it is a Qualcomm chipset, and it has been ROOT and authorized. If all are satisfied, it may be that the new phone needs to be adapted.</span></div>
+        <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span style="font-size: 11pt;"><br /></span>
+        </div>
+        <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">
+          <h2><span style="font-size: 14pt; color: rgb(50, 135, 18);-en-paragraph:true;">5. What to do if I don't know which frequency bands to lock</span></h2>
+        </div>
+        <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span
+            style="font-size: 11pt;-en-paragraph:true;">  </span> <span style="-en-paragraph:true;"><span
+              style="font-size: 11pt;">  First find the list of supported LTE frequency bands on the device page, and then try them separately. If the list is empty, you can determine which frequency bands Google's current operator supports.
+              Then check the frequency band list. Don't select more than one at a time, you need to try one by one. After successfully locking the network frequency band, you can see the corresponding arfcn in the LTE page,
+              Remember that if you find that the arfcn is good in the later stage of these Arfcn , you can directly enter the arfcn number at the frequency, such as 375. Up to 2 arfcns can be input at a time.</span></span></div>
+        <!-- <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span
+            style="font-size: 11pt;">然后在频段列表里面勾选。不要一次勾选多个，需要一个个的尝试。锁网频段成功后，可以在LTE页面里面看到对应的频点，</span></div>
+        <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span
+            style="font-size: 11pt;">记住这些频点</span><span
+            style="font-size: 11pt; color: unset; font-family: unset;">后期如果发现那个频点好，可以直接在锁频点哪里输入频点号，比如375等。频点最多可以一次输入2个。</span>
+        </div> -->
+        <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"> 
+           <img src="img/Image3.png" type="image/png" data-filename="Image.png" /></div>
+
+        <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span
+            style="font-size: 11pt;-en-paragraph:true;"><br /></span></div>
+
+        <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">
+          <h2><span style="font-size: 14pt; color: rgb(50, 135, 18);-en-paragraph:true;">6. Ordinary member rights</span></h2>
+        </div>
+        <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span
+            style="font-size: 11pt;-en-paragraph:true;">    Ordinary members can smoothly use the frequency band lock ,PCI lock,Arfcn and network lock functions.
+          </span></div>
+
+        <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><br /></div>
+        <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><br /></div>
+        <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span
+            style="font-size: 14pt; color: rgb(50, 135, 18); font-weight: bold;-en-paragraph:true;">7. What to do if the frequency lock function not work</span><br />
+        </div>
+        <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span
+            style="-en-paragraph:true; font-size: 11pt;">
+                Some mobile phones cannot be used normally due to driver or permission issues, you can try the following methods in the settings
+          </span></div>
+        <ul>
+          <li>
+            <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">  Turn off the firewall.</div>
+          </li>
+          <li>
+            <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">  Select compatibility mode.</div>
+          </li>
+        </ul>
+        <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"> 
+           <img src="img/Image.png" type="image/png" data-filename="Image.png" /></div>
+
+        <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span
+            style="font-size: 11pt;-en-paragraph:true;"><br /></span></div>
+        <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><br /></div>
+        <div
+          style="box-sizing: border-box; -webkit-tap-highlight-color: transparent; margin: 1em 0px; padding: 0px; font-size: medium; letter-spacing: normal; orphans: 2; text-align: start; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;">
+          <span
+            style="box-sizing: border-box; -webkit-tap-highlight-color: transparent; font-size: 14pt; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px;"><span
+              style="color: rgb(50, 135, 18); font-family: Calibri; font-size: 14pt; font-variant-caps: normal; font-variant-ligatures: normal; font-weight: bold;">8. Premium membership rights</span></span>
+        </div>
+        <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span style="font-size: medium;"><span
+              style="box-sizing: border-box; -webkit-tap-highlight-color: transparent; font-size: 11pt; letter-spacing: normal; orphans: 2; text-indent: 0px; text-transform: none; white-space: normal; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; color: rgb(0, 0, 0); font-family: Calibri; font-variant-caps: normal; font-variant-ligatures: normal;"> 
+                 Premium members can use all the functions of the software without restrictions</span></span></div>
+        <ul>
+          <li>
+            <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">Task test.</div>
+          </li>
+          <li>
+            <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">File recording.</div>
+          </li>
+          <li>
+            <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">Memory playback (signaling, event, parameter synchronization).</div>
+          </li>
+          <li>
+            <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span
+                style="font-size: unset; color: unset; font-family: unset;">File playback.</span></div>
+          </li>
+          <li>
+            <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">Import of cell parameters and base station connection, query.
+            </div>
+          </li>
+          <li>
+            <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">Batch signaling export (support csv, pcap).</div>
+          </li>
+          <li>
+            <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">View and export a single signal.</div>
+          </li>
+          <li>
+            <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">Signaling and event dual card separation.</div>
+          </li>
+          <li>
+            <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">Map tracking export (support csv, kml).</div>
+          </li>
+        </ul>
+        </br>
+        </br>
+        <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">
+          <div style="margin-top: 1em; margin-bottom: 1em;-en-paragraph:true;"><span
+              style="font-size: 14pt; color: rgb(50, 135, 18); font-weight: bold;-en-paragraph:true;">9. What to do if the outdoor map track is not continuous</span>
+          </div>
+          <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span
+              style="font-size: 11pt;-en-paragraph:true;">   
+              For power saving considerations, Android currently restricts background applications from using location requests. If there is such a requirement in the drive test, you need to do the following settings, take Xiaomi mobile phone as an example:</span><br /></div>
+          <ol>
+            <li>
+              <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">Select "No restrictions" in the power saving strategy.</div>
+            </li>
+            <li>
+              <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">Select "Always allow" in the permission management.</div>
+            </li>
+          </ol>
+
+          <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">  
+            <img src="img/Image4.png" type="image/png" data-filename="Image.png" width="257" />
+            <img src="img/Image5.png" type="image/png" data-filename="Image.png" width="285" /><br />
+          </div>
+          <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><br /></div>
+          <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span
+              style="font-size: 11pt;-en-paragraph:true;"><br /></span></div>
+          <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><br /></div>
+          <div><br /></div>
+        </div>
+        <div><br /></div>
+    </span>
+  </div>
+</body>
+
+</html>
