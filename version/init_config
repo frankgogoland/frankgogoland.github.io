@@ -18,5 +18,9 @@
     "apk_cn_md5": "f3502d9d3c68c4f04db26e9f72d224ce",
     "info_cn": "修改权限申请方式\n增加HTTP文件上传\n合并KML文件",
     "info_en": "修改权限申请方式"
+  },
+  "auditing": {
+    "xiaomi": "1.6.9.5",
+    "huawei": "1.6.9.5"
   }
 }
