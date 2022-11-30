@@ -25,7 +25,7 @@
     "baidu": "1.6.9.0"
   },
   "speedtest":{
-    "use_plugin" : 1,
+    "use_plugin" : 0,
     "gplay_use_plugin" : 0,
     "native_url" : "http://c.speedtest.net/speedtest-servers-static.php"
   }
