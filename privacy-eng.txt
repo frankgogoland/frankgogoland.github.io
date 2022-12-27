@@ -1,49 +1,122 @@
-1、 Special tips
-In particular, I would like to remind you (users) that before using Cellular-Pro, please carefully read the Cellular-Pro User Service Agreement (hereinafter referred to as the "agreement") to ensure that you fully understand the terms of this agreement. Please carefully read and choose to agree or disagree with this agreement.
-After you agree and click to confirm the terms of this agreement, you can become an official user of Cellular-Pro and use various test functions. Your login, use, etc. will be deemed to be bound by the terms of this agreement. If you disagree with this agreement or have any questions about the terms of this agreement, please stop Cellular-Pro immediately and choose not to use this app.  
-This agreement stipulates the rights and obligations between Cellular-Pro and the user with respect to the "Cellular-Pro" service (hereinafter referred to as the "service")“ "User" refers to the individual or company who logs in and uses this app.
-2、 Software use
-1. With permission, the app can obtain the user's device information, which is used to check your membership with the server.
-2. With permission, the software can obtain GPS (ACCESS_COARSE_LOCATION/ACCESS_FINE_Location), network permission, memory card read-write permission.
-3. If the user refuses to provide the permission to obtain GPS, the parameter view of LTE / NR / WCDMA / GSM will fail to obtain parameter information because the auxiliary GPS permission cannot be obtained
-4. If the user refuses to provide the user's equipment information permission, the voice calling and called services cannot be completed.
-5. If the user refuses the GPS permission, the outdoor map will be involved, and the track management function will not be available
-6. Because app is a network optimization product, it will refresh network parameters in real time, such as obtaining data such as cell operator name and network type
-7. Because the app has the function of outdoor map management, there will be the operation of collecting GPS information at intervals. If the user prohibits it, the function will not be used
-8. Purpose of APP collecting device MAC address and software installation list: app itself does not collect MAC address and software installation list, which is required by the integrated third-party SDK
-Considering the accuracy of advertising and avoiding advertising that does not conform to the region, there may be a need to obtain the local software installation list. For this part, refer to the following third-party SDK
-Privacy instructions for.
-3、 Third party SDK
-The third-party SDK integrated with this software includes
-1. Baidu map (for outdoor map)
-2. Umeng App statistics (for app crash Collection)
-(1) These software may try to obtain user equipment information to associate and locate bugs or users, but they will not collect it frequently.
-(2) If the user refuses authorization, the device information cannot be obtained
-(3) For devices above Android 10, they will try to use advertising ID to avoid directly obtaining IMEI, IMSI and other privacy information.
-Please refer to the SDK privacy agreement for details
-4、 User guarantee
-When using Cellular-Pro, users shall not violate relevant national laws and regulations, including but not limited to the following principles:
-(1) Violating the basic principles defined in the constitution;
-(2) Endangering national security, divulging state secrets, subverting state power and undermining national unity;
-(3) Harming the honor and interests of the state;
-(4) Containing other contents prohibited by laws and administrative regulations.  
-(5) Involving the privacy, personal information or data of others;
-(6) It contains other information that interferes with the normal operation of the service and infringes upon the legitimate rights and interests of other users or third parties.
-4、 Disclaimer
-1. App does not guarantee the accuracy and integrity of external links set up to provide convenience to users. At the same time, app does not assume any responsibility for the content on any web page that is not actually controlled by mobile app.
-2. The user clearly and agrees that the risk of using the mobile app network service will be borne by himself; All consequences arising from the use of APP mobile phone app network services shall also be borne by him; The mobile app is not responsible for this.
-3. In addition to the service terms indicated on the mobile app, the mobile app will not be responsible for any accident, negligence, copyright or other intellectual property infringement and any loss caused by the improper use of this app.
-4. For the interruption of network service or other defects caused by force majeure or reasons beyond app's control such as hacker attack and communication line interruption, which makes users unable to use the app normally, app will not bear any responsibility, but will try its best to reduce the loss or impact on users.
-5、 Termination of services
-1. The application has the right to terminate providing services to users under the following circumstances:
-(1) If the user violates the relevant provisions of this service agreement, it has the right to terminate the provision of services to the user;
-(2) When the terms of service are terminated or updated, the user expressly does not want to accept the new terms of service;  
-6、 Privacy statement
-1. Scope of application:
-(1) When the user uses Cellular-Pro, with the user's permission, the app will automatically obtain the user's longitude and latitude information;
-(2) When the user uses Cellular-Pro, with the user's permission, the app will obtain the user's equipment information, which will not be collected frequently, but only used to verify the membership and data display
-(3) When the user uses Cellular-Pro, with the user's permission, the software will collect the user's terminal model, terminal system and other information to display and authenticate the identity
-7、 Other
-1. For issues not covered in this statement, please refer to relevant national laws and regulations. In case of conflict between this statement and relevant national laws and regulations, the national laws and regulations shall prevail.
-2. The copyright, modification, update and final interpretation of the relevant statements on this website belong to the Cellular-Pro Team.
-3. Contact information email: alibaba1126@126.com
+                                                                                                               Privacy  Policy
+
+　　This policy applies only to Cellular-Pro products or services. Date last updated:{DEC 27, 2022}
+　　This policy will help you understand the following:
+　　1. How we collect and use your user information
+　　2. Rules for the use of information we collect
+　　3. How do we share, transfer and publicly disclose your user information
+　　4. How do we protect your user information
+　　5. Your rights
+　　6. How to update this policy
+　　7. Contact us
+　　
+　　We are well aware of the importance of user information to you, and will do our best to protect the safety and reliability of your user information. We are committed to maintaining your trust in us and abide by the following principles to protect your user information: the principle of consistent power and responsibility, the principle of clear purpose, the principle of choice consent, the principle of least sufficient, the principle of ensuring security, the principle of subject participation, the principle of openness and transparency, etc. . At the same time, we promise that we will take corresponding security protection measures to protect your user information in accordance with mature security standards in the industry.
+　　Please read and understand this Privacy Policy carefully before using our products (or services).
+　　1. How we collect and use your personal information
+　　We will explain the types of your personal information we collect and their corresponding uses one by one, so that you can understand the specific types of personal information we collect for a specific function, the reason for using it, and the way of collecting and selling it.
+　　(1) When you use some functions, we will collect some of your sensitive information after obtaining your consent, including: location information, device ID information (IMEI, MAC, Android Id, Mac address, etc.), current Network information, photo album information, call function. The location information is used to display the current location of the outdoor map, and the device information is also displayed on the interface, which is convenient for users to query by themselves. APP also uses this information to mark to distinguish different users. In addition, it is necessary to obtain the permission of the user's call record when performing the calling service. With this permission, you can get the call duration, which is convenient for business statistics.
+　　(2) We obtain and collect your personal information mainly to adapt the functions of APP. Cellular-Pro will provide the following functions for users to use:
+     1) Device information page. This page can display the brand, model, manufacturer, CPU, baseband, etc. of the mobile phone. It also includes SIM card information, including: PLMN, operator, current mobile network, IMEI, IMSI, UE capability, etc.
+     2) Outdoor map page. This page is used to assist users to implement outdoor trajectory services and render current mobile network information in real time.
+     3) Task test page. This page has a voice call test function.
+     4) Indoor map page. This page is used to implement indoor coverage dot testing. Users can open the photo album, import the prepared indoor map and start dot testing.
+
+　　We provide you with services in this privacy policy, optimize our services and protect your account security. We will ask you for relevant permissions; sensitive permissions such as cameras, microphones, photo albums, etc. will not be enabled by default. The service will be opened for you only after obtaining your consent
+　　Security protection: In order to protect the security of your account, we need to collect and process your device information and log information, and we will also use this information to prevent various violations of laws and regulations or violations of the legitimate rights and interests of other subjects.
+　　When you use our services, in order to ensure your normal use of our services, maintain the normal operation of our services, improve and optimize our service experience and protect your account security, we will collect your device MAC after obtaining your consent Address, IMEI, IMSI, device serial number, android ID, this type of information is the basic information that must be collected to provide services.
+We will collect your information through identifiers and related technologies above to improve user experience.
+　　(3) Instructions for invoking device permissions
+    1) Album permissions: When you need to import indoor maps, you need album permissions.
+    2) Call authority: Call function is required when you need to test call tasks.
+    3) Positioning authority: The outdoor map page displays real-time trajectory and current network information, service cell identification, and signal strength.
+    4) Read call records: When you need to test call tasks and obtain call delays, you need to authorize this function.
+    Remarks: Due to the need to provide the real-time continuous track of the user's outdoor tracking, the current frequency of GPS collection is 1-2 seconds.
+
+　　2. Rules for the use of information we collect
+　　The above information you provide will continue to authorize us to use it during your use of the service. Information that cannot identify a natural person's personal identity alone or in combination with other information does not belong to personal information in the legal sense.
+If we combine non-personal information with other information to identify you personally, or use it in combination with your personal information, we will, during the combined use,
+Such information is treated and protected as your personal information in accordance with this Privacy Policy.
+　　
+　　3. How do we share, transfer and publicly disclose your user information
+　　(1) Sharing
+　　We will not share your user information with any other company, organization or individual, except in the following cases:
+　　1. Sharing with explicit consent: After obtaining your explicit consent, we will share your user information with other parties.
+　　2. We may share your user information externally in accordance with laws and regulations, or in accordance with the mandatory requirements of government authorities.
+　　3. Sharing with our affiliates: Your user information may be shared with our affiliates. We will only share necessary user information and be bound by the purposes stated in this Privacy Policy. If the affiliated company wants to change the purpose of processing user information, it will ask for your authorization again.
+　　4. Sharing with authorized partners: Only to achieve the purpose stated in this policy, some of our services will be provided by authorized partners. We may share some of your user information with our partners to provide better customer service and user experience. We will only share your user information for legal, legitimate, necessary, specific, and clear purposes, and will only share user information necessary to provide services. In order to better operate and improve technology and services, you agree that we and our authorized partners may use the collected information for other services and purposes in compliance with relevant laws and regulations.
+　　5. In order to ensure the stable operation and function realization of our client, so that you can use and enjoy more services and functions, our application will embed the SDK of authorized partners. We will conduct strict security inspections on the application program interface (API) and software tool development kit (SDK) for authorized partners to obtain relevant information, and agree with authorized partners on strict data protection measures to make them comply with this policy and any other Relevant confidentiality and security measures are used to process and collect your personal information, collected as in the following data types.
+ 
+【Baidu SDK】
+ Purpose of use: location services
+ Types of collected information: device information, location information
+ Privacy Agreement: https://map.baidu.com/zt/client/privacy/index.html
+
+【Mapbox SDK】
+ Purpose of use: location services
+ Types of collected information: device information, location information
+ Privacy Agreement: https://www.mapbox.com/legal/privacy
+ 
+【Firebase SDK]
+ Purpose of use: Troubleshoot crashes, help app improve stability
+ Types of collected information: device manufacturer, device model, device system version, unique device identification code, network information
+ Privacy Agreement: https://firebase.google.com/support/privacy
+  
+We will sign strict confidentiality agreements with companies, organizations and individuals with whom we share user information, requiring them to process user information in accordance with our instructions, this Privacy Policy and any other relevant confidentiality and security measures.
+
+　　(2) Transfer
+　　We will not transfer your user information to any company, organization or individual unless with your permission.
+　　
+　　(3) Public disclosure
+　　We will only publicly disclose your user information under the following circumstances:
+　　1. After obtaining your explicit consent;
+　　2. Disclosure based on law: We may publicly disclose your user information under the circumstances of laws, legal procedures, lawsuits or mandatory requirements of government authorities.
+　　
+　　(4) Exceptions to obtaining prior authorization and consent when sharing, transferring, and publicly disclosing information
+　　Please understand that, according to laws, regulations and relevant national standards, we do not need your authorization to share, transfer or publicly disclose your user information in the following situations:
+　　1. Directly related to national security and national defense security;
+　　2. Directly related to public security, public health, or major public interests;
+　　3. Directly related to criminal investigation, prosecution, trial and judgment execution;
+　　4. For the protection of your or other personal life, property and other major legitimate rights and interests, but it is difficult to obtain the consent of the person;
+　　5. Information that you disclose to the public by yourself;
+　　6. Collected from legally disclosed information, such as legal news reports, government information disclosure and other channels.
+　　
+　　4. How do we protect your user information
+　　(1) We have adopted industry-standard security protection measures to protect the user information you provide to prevent data from unauthorized access, public disclosure, use, modification, damage or loss. We will take all reasonable and feasible measures to protect your user information. For example, when exchanging data between your browser and the "service", it is protected by SSL encryption; we also adopt https security encryption for interactive data; we will use trusted protection mechanisms to prevent data from being maliciously attacked; we will deploy access Control mechanisms to ensure that only authorized personnel have access to user information.
+　　(2) We will take all reasonable and feasible measures to ensure that no irrelevant user information is collected. We will only retain your user information for the period necessary to achieve the purposes stated in this policy, unless an extended retention period is required or permitted by law.
+　　(3) The Internet is not an absolutely secure environment, and emails, instant messaging, and communication methods with other users are not encrypted. We strongly recommend that you do not send user information through such methods.
+　　(4) The Internet environment is not 100% safe, and we will do our best to ensure the security of any information you send us. Even if we make great efforts and take all reasonable and necessary measures, it may still be impossible to prevent your user information from being illegally accessed, stolen, tampered with or destroyed, resulting in damage to your legitimate rights and interests. Please understand the above risks of the information network and bear them voluntarily.
+　　(5) After an unfortunate user information security incident occurs, we will promptly inform you in accordance with the requirements of laws and regulations: the basic situation and possible impact of the security incident, the disposal measures we have taken or will take, and your own prevention and control measures. Advice on reducing risks, remedies for you, etc. We will promptly inform you of the event-related situation by email, letter, phone call, push notification, etc. When it is difficult to inform the user information subject one by one, we will issue an announcement in a reasonable and effective manner. At the same time, we will also actively report the handling of user information security incidents in accordance with the requirements of the regulatory authorities.
+
+　　5. Your rights
+　　In accordance with relevant Chinese laws, regulations, standards, and common practices in other countries and regions, we guarantee you to exercise the following rights with respect to your user information:
+　　(1) Access to your user information
+　　You have the right to access your user information, except for exceptions provided by laws and regulations. If you would like to exercise your data access rights, you can contact us by email.
+　　We will respond to your access request within 30 days.
+　　For other user information generated during your use of our products or services, as long as we do not need too much investment, we will provide it to you. Please email if you would like to exercise your data access rights.
+　　
+　　(2) Correct your user information
+　　When you find that the user information we process about you is wrong, you have the right to ask us to make corrections. You can send us an email. We will respond to your correction request within 30 days.
+　　
+　　(3) Delete your user information
+　　In the following situations, you can request us to delete user information:
+　　1. If our handling of user information violates laws and regulations;
+　　2. If we collect and use your user information without your consent;
+　　3. If our handling of user information violates our agreement with you;
+　　4. If we no longer provide you with products or services.
+　　We will evaluate according to your deletion request, and if the corresponding regulations are met, we will take corresponding steps to deal with it. When you make a deletion request to us, we may ask you to verify your identity to ensure the security of your account.
+    When you delete information from our service, we may not immediately delete the corresponding information from the backup system due to applicable laws and security technologies, and we will safely store your information until the backup can be cleared or anonymized.
+　　
+　　
+     6. How to update this policy
+    We may revise the content of this statement in due course.
+　　If such changes will result in substantial derogation of your rights under this statement, we will notify you by prompting in a prominent position on the page, sending you an email, etc. before the changes take effect. In this case, if you continue to use our services, you agree to be bound by the revised policy.
+　　
+     7. Contact us:
+The copyright of Cellular-Pro products and its right to modify, update and final interpretation belong to Cellular-Pro Team or authorized companies. When you have other complaints, suggestions, and personal information-related issues, please contact us through our official telegram group. You can also send your questions to (email)
+     E- mail: alibaba1126@126.com .
+　 Telegram group: https://t.me/CellularPro
+
+
+
+
+
