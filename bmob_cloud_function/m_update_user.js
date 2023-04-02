@@ -1,3 +1,6 @@
+/*
+更新VipInfo会员信息表
+*/
 function onRequest(request, response, modules) {
   var db = modules.oData;
   var httpType = request.method;
@@ -8,7 +11,7 @@ function onRequest(request, response, modules) {
   var version;
   var uuid;
   var utdid;
-  var objectId; 
+  var objectId;
    if ("GET" == httpType) {
        objectId = request.query.objectId;
        vaid = request.query.vaid;
@@ -30,13 +33,13 @@ function onRequest(request, response, modules) {
        utdid = request.body.utdid;
    }
   //  response.end("vaid = " + vaid);
-   if (vaid === 'undefined') vaid = null;
-   if (imei === 'undefined') imei = null;
-   if (imei0 === 'undefined') imei0 = null;
-   if (imei1 === 'undefined') imei1 = null;
-   if (uuid === 'undefined') uuid = null;
-   if (version === 'undefined') version = null;
-   
+   if (vaid === undefined) vaid = null;
+   if (imei === undefined) imei = null;
+   if (imei0 === undefined) imei0 = null;
+   if (imei1 === undefined) imei1 = null;
+   if (uuid === undefined) uuid = null;
+   if (version === undefined) version = null;
+
    //response.end("vaid = " + vaid);
    
   db.update({
@@ -44,9 +47,10 @@ function onRequest(request, response, modules) {
     "objectId":objectId,
     "data":{"utdid":utdid,"uuid":uuid,"imei0":imei0,"imei1":imei1,"imei":imei,"version":version,"vaid":vaid}
   },function(err,data){
-      if (err == null)
-        response.send("response = " + data);
-      else
-        response.send(err);
+      response.send(data);
+    //   if (err === null)
+    //     response.send(data); // {"updatedAt":"2023-03-05 15:14:58"}
+    //   else
+    //     response.send(err);
   });
 }                                                                                    
