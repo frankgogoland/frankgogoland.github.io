@@ -20,6 +20,7 @@ function onRequest(request, response, modules) {
     var utdid;
     var order;
     var version;
+    var phoneModel;
    if ("GET" == httpType) {
        utdid = request.query.utdid;
        objectId = request.query.objectId;
@@ -28,6 +29,7 @@ function onRequest(request, response, modules) {
        member_type = request.query.member_type;
        order = request.query.order;
        version = request.query.version;
+       phoneModel = request.query.phoneModel;
     }else {
         utdid = request.body.utdid;
        objectId = request.body.objectId;
@@ -36,6 +38,7 @@ function onRequest(request, response, modules) {
        member_type = request.body.member_type;
        order = request.body.order;
        version = request.body.version;
+       phoneModel = request.body.phoneModel;
    }
    if (day === undefined) day = 0;
    if (month === undefined) month = 0;
@@ -43,6 +46,7 @@ function onRequest(request, response, modules) {
    var _result = {
        "code":"", //错误码,A001,A002,A003,A003,A004,A005,A1024
        "info":"",
+       "member_type":"",
        "createdAt":"", //创建日期
        "updatedAt":"",  //更新日期
        "expireDate":"", //过期日期
@@ -90,6 +94,7 @@ function onRequest(request, response, modules) {
                     var ratio = 6.5;
                     var extra = diff > ratio ? 0 : 1;
                     _day = diff / ratio + extra;
+                    _day = Math.round(_day);
                     _month = Number(month);
                 }
             }else {
@@ -129,7 +134,7 @@ function onRequest(request, response, modules) {
         db.update({
         "table":"VipInfo",
         "objectId":objectId,
-        "data":{"day":_day,"month":_month,'member_type':member_type,'uuid':uuid,'order':_order,'expireDate':expireDate,'version':version}
+        "data":{"day":_day,"month":_month,'member_type':member_type,'uuid':uuid,'order':_order,'phoneModel':phoneModel,'expireDate':expireDate,'version':version}
          },function(err,data){
           //   _dataObject= JSON.parse(data);
               if (data.code === undefined) {
@@ -139,6 +144,7 @@ function onRequest(request, response, modules) {
                   _result.objectId = objectId;
                   _result.utdid = dataObject.utdid;
                   _result.expireDate = expireDate;
+                  _result.member_type = member_type;
                   _result.uuid = uuid;
                   response.send(_result);
               }

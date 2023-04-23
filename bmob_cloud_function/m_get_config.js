@@ -12,7 +12,7 @@ function onRequest(request, response, modules) {
         "uuid":""
     };
    db.findOne({
-      "table":"GooglePlayLimit",
+      "table":"Limit",
       "objectId":"S3Ud777P"
      },function(err,data){
         var dataObject = JSON.parse(data);
