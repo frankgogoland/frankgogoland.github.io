@@ -1,0 +1,134 @@
+<html>
+<head>
+  <title>隐私政策条款</title>
+  <basefont face="微软雅黑" size="2" />
+  <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+  <meta name="exporter-version" content="YXBJ Windows/604762 (zh-CN, DDL); Windows/10.0.0 (Win64); EDAMVersion=V2;"/>
+  <style>
+    body, td {
+      font-family: 微软雅黑;
+      font-size: 10pt;
+    }
+  </style>
+</head>
+<body>
+<a name="1390"/>
+
+
+<div>
+<span><div style="text-align: center;"><span style="font-size: 14pt;"><b>Privacy policy</b></span></div><div>　
+	　This policy applies only to 5G Lab Test products or services. Last updated: {5 Nov 2022}</div><div>　　This policy will help you understand the following:</div>
+<div>　　1.how do we collect and use your user information</div>
+<div>　　2.Rules for the use of the information we collect</div>
+<div>　　3.How do we share, transfer and publicly disclose your user information</div>
+<div>　　4.How do we protect your user information</div>
+<div>　　5.Your Rights</div>
+<div>　　6.How to update this Policy</div>
+<div>　　7.Contact us</div>
+<div>　　</div>
+<div>　　We know the importance of user information to you, and will do our best to protect your user information safe and reliable. We are committed to maintaining your trust in us and protecting your user information by adhering to the following principles: the principle of consistency of rights and responsibilities, the principle of clear purpose, the principle of consent by choice, the principle of minimum sufficient, the principle of ensuring security, the principle of subject participation, the principle of openness and transparency. At the same time, we promise that we will according to the industry mature security standards, take appropriate security protection measures to protect your user information.
+Please read and understand this Privacy Policy carefully before using our products (or services).</div>
+<div>　　<font style="font-size: 12pt;"><span style="font-size: 12pt; font-weight: bold;">
+	1. How do we collect and use your personal information</span></font></div><div>　
+		　We will explain the types of personal information we collect from you and their corresponding purposes one by one, so that you can understand the types of personal information we collect for a specific function, the reasons for its use and the way it is collected and sold.</div>
+<div>　　1.1 When you use some functions, we will collect some sensitive information from you after obtaining your consent, which includes: Location information, device ID information (IMEI, MAC, Android ID, Mac address,BODY_SENSORS,OAID, etc.), current network information, photo album information, call function. The location information is used to display the current location of the outdoor map, and the device information is also displayed on the interface for users to query. The APP also uses this information to tag different users. In addition, you need to obtain the call record permission when executing the call service. With this permission, you can obtain the call duration, facilitating service statistics.</div>
+<div>　　1.2 We obtain and collect your information mainly for the function of APP. The APP will provide the following functions for users</div>
+<div>
+	1) Device information page. This page can display the brand, model, manufacturer, CPU, baseband and so on. It also includes SIM card information, including: PLMN, carrier, current mobile network, IMEI, IMSI, UE capability, etc.</div>
+<div>
+	2) Outdoor map page. This page is used to assist users to realize outdoor track service and render the current mobile network information in real time.</div>
+<div>
+	3) Task test page. This page has the voice call test function.</div>
+<div>
+			4) Indoor map page. This page is used to test indoor coverage. Users can open the album, import the prepared indoor map and start typing.</div>
+			<div><br/></div>
+			<div>　　We provide you with services in this privacy policy, optimize our services and protect your account security. We will ask you for relevant permissions; sensitive permissions such as cameras, microphones, photo albums, etc. will not be enabled by default. The service will be opened for you only after obtaining your consent.</div>
+			<div>　　Security protection: In order to protect the security of your account, we need to collect and process your device information and log information, and we will also use this information to prevent various violations of laws and regulations or violations of the legitimate rights and interests of other subjects.</div>
+			<div>　　When you use our services, in order to ensure your normal use of our services, maintain the normal operation of our services, improve and optimize our service experience and protect your account security, we will collect your device MAC after obtaining your consent Address, IMEI, IMSI, device serial number, android ID, this type of information is the basic information that must be collected to provide services.</div>
+			<div>We will collect your information through identifiers and related technologies above to improve user experience.。</div>
+				<div>　　1.3 Description of device permission invocation</div>
+				<div>1) Storage permission (read/write storage) : In order to store the necessary application configuration files and task test data files, signaling export, test track export, etc., your storage permission needs to be invoked.</div>
+				<div>2) Album permissions: When you need to import the indoor map, you need album permissions.</div>
+				<div>3) Call rights: Call functions are required when you need to test call tasks.</div>
+				<div>4) Location permission: outdoor map page displays real-time track and current network information, service cell identification, signal strength.</div>
+				<div>5）Read call records: When you need to test call tasks and obtain call delay, you need to authorize this function.</div>
+				<div>6）Access telephone equipment: lock network and lock frequency.</div><br/>
+
+				<div> <b>（1）Due to the need to render the outdoor dot track in real time, the frequency of GPS acquisition is 1-2 seconds.</b></div>
+				<div> <b>（2）The frequency of the base station is collected in 1-2 seconds as it needs to render the trend diagram of cell level in real time.</b></div>
+				<div> <b>（3）Android needs to access GPS to obtain cell information. Disabling GPS will result in failure to display network signal strength.。</b></div>
+				<div> <b>（4）Disabling the permission to access telephone equipment information will cause the locking network frequency locking function can not work properly.</b></div>
+				<div><br/></div><div>　　 <font style="font-size: 12pt;">
+					<b>2. Rules for the use of the information we collect</b></font></div>
+						<div>The above information provided by you will continue to authorize us to use the Service for the duration of your use. Information that cannot identify the personal identity of a natural person alone or in combination with other information is not personal information in the legal sense.</div>
+						<div>If we use non-personal information in conjunction with other information to identify you personally, or in conjunction with your personal information, we will, during the combined use,</div>
+						<div>Such information shall be treated and protected as your personal information in accordance with this Privacy Policy.</div>
+				<div>　　</div><div><font style="font-size: 12pt;"><b>　　3. How do we share, transfer and publicly disclose your user information</b></font></div>
+				<div>　　3.1 Sharing</div><div>　　We will not share your user information with any other company, organization or individual, except in the following cases:</div>
+				<div>　　1) Sharing with Express consent: After obtaining your express consent, we will share your user information with other parties.</div>
+				<div>　　2) We may share your user information in accordance with laws and regulations or mandatory requirements of competent government departments.</div>
+				<div>　　3) Sharing with our Affiliates: Your user information may be shared with our affiliates. We will only share necessary user information subject to the purposes stated in this Privacy Policy. If the Affiliate wants to change the purpose of processing user information, it will seek your authorization again.</div>
+				<div>　　4) Sharing with Authorized Partners: Some of our services will be provided by authorized partners only for the purpose stated in this Policy. We may share some of your user information with our partners to provide better customer service and user experience. We will only share your user information for legal, legitimate, necessary, specific and explicit purposes, and only share the user information necessary to provide the service. In order to better operate and improve technology and service, you agree that we and authorized partners may use the collected information for other services and purposes in accordance with relevant laws and regulations.</div>
+				<div>　　5) In order to ensure the stable operation and functional realization of our client, so that you can use and enjoy more services and functions, we will embed the SDK of authorized partners in our application. We will carry out strict security checks on the application program interfaces (apis) and software tool development kits (SDKS) through which authorized partners obtain relevant information, and agree strict data protection measures with authorized partners to process and collect your personal information in accordance with this policy and any other relevant confidentiality and security measures, such as the following data types.</div><div> 
+<span><div>【Baidu SDK】</div><div> Purpose of use: location services</div>
+	<div>Types of collected information: device information, location information.</div>
+	<div>Privacy Agreement: <a href="https://map.baidu.com/zt/client/privacy/index.html">Privacy Policy ></a></div><div> </div>
+	<div>【Mapbox SDK】</div><div>Purpose of use: location services</div><div>Types of collected information: device information, location information</div>
+	<div>Privacy Agreement：<a href="https://www.mapbox.com/legal/privacy">Privacy Policy ></a></div><div> </div>
+	<div>Firebase SDK]</div><div>Purpose of use: Troubleshoot crashes, help app improve stability</div>
+	<div> Types of collected information: device manufacturer, device model, device system version, unique device identification code, network information</div>
+	<div>Privacy Agreement：<a href="https://firebase.google.com/support/privacy">Privacy Policy ></a></div>
+	<div> </div></span>
+	
+	<div>We will sign strict confidentiality agreements with the companies, organizations and individuals with whom we share user information, requiring them to handle user information in accordance with our instructions, this Privacy Policy and any other relevant confidentiality and security measures.</div>
+	<div>　　3.2 Transfer</div>
+	<div>　　We will not transfer your user information to any company, organization or individual unless with your permission.</div>
+		<div>　　</div>
+		<div>　　3.3 Public disclosure</div><div>　　We will only publicly disclose your user information in the following circumstances：</div>
+		<div>　　1) After obtaining your express consent</div>
+		<div>　　2) Disclosure based on law: We may publicly disclose your user information under the circumstances of laws, legal procedures, lawsuits or mandatory requirements of competent government authorities.</div>
+		<div>　　</div>
+		<div>　　3.4 Exceptions to prior authorization for sharing, transferring or publicly disclosing information</div>
+		<div>　　Please understand that according to laws and regulations and relevant national standards, we do not need to obtain your authorization and consent to share, transfer and publicly disclose your user information under the following circumstances：</div>
+		<div>　　1) Directly related to national security and national defense security;</div>
+		<div>　　2) Those directly related to public security, public health and major public interests;</div>
+		<div>　　3) Those directly related to criminal investigation, prosecution, trial and execution of judgment;</div>
+		<div>　　4) In order to protect your or other individuals' life, property and other major legal rights and interests, but it is difficult to get the consent of the person;</div>
+		<div>　　5) Information disclosed by you to the public;</div>
+		<div>　　6) Collected from legally publicly disclosed information, such as legitimate news reports, government information disclosure and other channels.</div>
+		<div>　　</div><div>　<font style="font-size: 12pt;"><b>　4. How do we protect your user information</b></font></div>
+		<div>　　4.1 We have adopted industry-standard security measures to protect the user information provided by you and prevent unauthorized access, public disclosure, use, modification, damage or loss of the data. We will take all reasonably practicable measures to protect your user information. For example, the exchange of data between your browser and the Service is protected by SSL encryption; We also use https security encryption for interactive data; We use trusted protection mechanisms to protect our data from malicious attacks; We will deploy access control mechanisms to ensure that only authorized personnel have access to user information.</div>
+		<div>　　4.2 We will take all reasonably practicable measures to ensure that we do not collect irrelevant user information. We will only retain your User information for as long as necessary to achieve the purposes stated in the Cost Policy, unless it is necessary to extend the retention period or permitted by law.</div>
+		<div>　　4.3 The Internet is not an absolutely secure environment, and E-mail, instant messaging and communication with other users are not encrypted. We strongly recommend that you do not send user information by such means.</div>
+		<div>　　4.4 he Internet environment is not 100% secure and we will do our best to ensure the security of any information you send us. Even though we have made great efforts and taken all reasonable and necessary measures, we still may not be able to prevent your user information from being illegally accessed, illegally stolen, illegally tampered with or destroyed, resulting in damage to your legitimate rights and interests. Please understand the above risks of the information network and voluntarily assume them.</div>
+		<div>　　4.5 In the event of an unfortunate user information security incident, we will, in accordance with the requirements of laws and regulations, promptly inform you of the basic situation and possible impact of the security incident, the measures we have taken or will take to deal with it, the suggestions you can independently prevent and reduce risks, and the remedial measures for you, etc. We will timely inform you of the relevant information of the event by email, letter, telephone, push notification and other means. When it is difficult to inform the user information subject one by one, we will take a reasonable and effective way to release announcements. At the same time, we will also take the initiative to report the handling of user information security incidents in accordance with the requirements of regulatory authorities.</div>
+			<div><br/></div>
+			<div>　<font style="font-size: 12pt;"><b>　5. Your Rights</b></font></div>
+			<div>　　In accordance with the relevant laws, regulations and standards of relative countries and regions,  we guarantee that you can exercise the following rights with your user information</div>
+			<div>　　5.1 Access your user information</div>
+			<div>　　You have the right to access your user information, subject to exceptions provided by laws and regulations. If you want to exercise your data access rights, you can contact us by email.
+We will respond to your request for access within 30 days.</div>
+			<div>　　As for other user information generated during your use of our products or services, as long as we do not need to spend too much, we will provide you. If you want to exercise data access, send an email.</div>
+			<div>　　</div>
+			<div>　　5.2 Correct your user information</div>
+			<div>　　When you find that there is an error in the user information we process about you, you have the right to ask us to make a correction. You can do this by sending us an email. We will respond to your request for correction within 30 days.
+</div><div>　　</div>
+		<div>　　  5.3 Delete your user information</div>
+		<div>　　You may request us to delete user information under the following circumstances:</div>
+		<div>　　1)  If our behavior of processing user information violates laws and regulations;</div>
+		<div>　　2)  If we collect and use your user information without your consent;</div>
+		<div>　　3)  If our behavior of processing user information violates the agreement with you;</div>
+		<div>　　4)  If we no longer provide you with products or services.</div>
+		<div>　　We will evaluate your deletion request according to the requirements and take appropriate steps to deal with it if it meets the requirements. When you make a deletion request to us, we may ask you to verify your identity to ensure the security of your account.</div>
+		<div>    When you delete information from our services, due to applicable laws and security technologies, we may not immediately delete the information from the backup system. We store your information securely until the backup can be erased or anonymized.</div>
+		<div>　　</div><div>　　</div><div><span>    </span><font style="font-size: 12pt;">
+			<b> 6. How to update this Policy</b></font></div>
+				<div>    We may revise this statement in due course.</div>
+				<div>    If any such change would result in a material derogation of your rights under this Statement, we will notify you before the change takes effect by Posting a prominent notice on the page, sending you an email, etc. In this case, by continuing to use our services, you agree to be bound by the revised policy.</div>
+				<div>　　</div><div><span>    </span><font style="font-size: 12pt;">
+					<b>7. Contact Us</b></font></div><div>    The copyright of 5G Lab Test products and its right to modify, update and final interpretation belong to 5G Lab Test Team or authorized companies. When you have other complaints, suggestions, and personal information-related issues, please contact us through our official telegram group. You can also send your questions to (email)</div>
+						<div>    E-mail: <a href="mailto:alibaba1126@126.com">alibaba1126@126.com</a>.</div>
+						<div>    Telegram group: <a href="https://t.me/CellularPro">5G Lab Test</a>.</div>
+						<div><br/></div><div><br/></div><div><br/></div><div><br/></div>
+						<div><br/></div><div><br/></div></span>
+</div></body></html> 
