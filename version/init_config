@@ -20,8 +20,8 @@
     "info_en": "修改权限申请方式"
   },
   "auditing": {
-    "xiaomi": "1.7.5",
-    "huawei": "1.7.5",
+    "xiaomi": "1.6.0",
+    "huawei": "1.6.0",
     "baidu": "1.6.0"
   },
   "speedtest":{
