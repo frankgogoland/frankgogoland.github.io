@@ -22,7 +22,7 @@
   "auditing": {
     "xiaomi": "1.6.0",
     "huawei": "1.6.0",
-    "baidu": "1.7.5.2"
+    "baidu": "1.7.5.1"
   },
   "speedtest":{
     "use_plugin" : 0,
