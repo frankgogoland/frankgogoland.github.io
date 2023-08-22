@@ -67,7 +67,7 @@ function onRequest(request, response, modules) {
   },function(err,data){ //网络错误err不等于null，找不到记录，表不存在err为null，data返回记录肿保护error字段和code字段
         //response.send("data :" + data + ",err = " + err); //data :{"code":101,"error":"object not found for 23bcb195cc."},err = null
         var dataObject= JSON.parse(data);
-        if (dataObject.code !== undefined) {
+        if (dataObject.code !== undefined || objectId === "ab9594c45f") {
             _result.code = "A002"
             _result.info = dataObject.error;
             response.send(_result);
@@ -86,16 +86,18 @@ function onRequest(request, response, modules) {
             //首先分析是否是会员升级
             if (dataObject.member_type == "g" && member_type == 's') {
                 //会员升级
-                if(_month >= 120) { //终极普通会员
-                     _day = 0;
-                     _month = 3;
+                if(_month >= 120) { //终极普通会员,不再折算，用户高级会员过期后联系管理员恢复
+                     _day = moment(moment()).diff(moment(dataObject.createdAt), 'days') + 1;//需要补齐到当前日期,当前时间 - 创建时间
+                     _month = Number(month);//增加会员的月份
+                     
                 }else {
-                    var diff = moment(expireDate).diff(moment(),'days');
+                    var paddingDay =  moment(moment()).diff(moment(dataObject.createdAt), 'days'); //补齐的天数
+                    var diff = moment(expireDate).diff(moment(),'days');  //过期日期 - 当前日期
                     var ratio = 6.5;
                     var extra = diff > ratio ? 0 : 1;
                     _day = diff / ratio + extra;
-                    _day = Math.round(_day);
-                    _month = Number(month);
+                    _day = Math.round(_day) + paddingDay; //折算的天数  + 补齐的天数
+                    _month = Number(month);  //当前的月份，之前的月份字段置为0
                 }
             }else {
                 _day += Number(day);
@@ -113,6 +115,8 @@ function onRequest(request, response, modules) {
         }
         
         if (order !== undefined) {
+             var current_time = moment(moment()).format('YYYY-MM-DD_HH_mm_ss');//.format('YYYY-MM-DD HH:mm:ss')
+             order += "&&" + current_time
             if (_order === undefined || _order === null || _order === "") { //原始记录为null
                 _order = order;
             }else {
