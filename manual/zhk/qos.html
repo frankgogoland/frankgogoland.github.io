@@ -31,13 +31,11 @@
           style="box-sizing: border-box; padding-left: 19px; padding-top: 6px; padding-bottom: 6px; border-left: 3px solid #b4c0cc; background-position: initial initial; background-repeat: initial initial; margin-top: 6px; --en-blockquote: true;">
           <div><span style="font-size: 11pt;">1、系统至少在Android 5.0以上。</span></div>
           <div><span style="font-size: 11pt;">2、锁GSM和WCDMA功能 需要在系统设置中打开开关。等网络处于GSM或者WCDMA的时候将自动显示锁频信息。</span></div>
-          <div><span style="font-size: 11pt;">3、锁频、锁网、信令及更多的物理层参数需要高通芯片，且ROOT后才能正常输出。</span></div>
-          <div><span style="font-size: 11pt;">4、华为及其他芯片可以使用测试功能，不影响配置测试计划和任务执行功能，文件格式可以选择CSV。</span></div>
-          <div><span style="font-size: 11pt;">5、早期手机比如S7,MI6等不支持双4G的设备，有时候存在锁频段回落到2G,但是锁频点正常的现象。</span></div>
+          <div><span style="font-size: 11pt;">3、锁频、锁网、信令及更多的物理层参数需要高通芯片且ROOT，或者海思芯片加上HiAgent服务后才能正常输出。</span></div>
+          <div><span style="font-size: 11pt;">4、其他芯片可以使用测试功能，不影响配置测试计划和任务执行功能，文件格式可以选择CSV。</span></div>
+          <div><span style="font-size: 11pt;">5、锁NSA的需要在锁频的界面勾选锁NSA选项。</span></div>
           <div><span style="font-size: 11pt;">6、如果频段存在，锁定后回落到2G，这时候可以重新勾选锁网的 “4G” 按钮，强制进入4G模式。</span></div>
         </div>
-        <div> 
-            <img src="img/Image.png" type="image/png" data-filename="Image.png" /></div>
         <div><br /></div>
         <div><br /></div>
         <h2><span style="font-size: 14pt; color: rgb(50, 135, 18);">二、支持哪些网络锁定</span></h2>
@@ -47,7 +45,7 @@
         </div>
         <div><span style="font-size: 11pt;"><br /></span></div>
         <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"></div>
-        <h2><span style="font-size: 14pt; color: rgb(50, 135, 18);">三、如何知道目前设备支持哪些LTE频段</span></h2>
+        <h2><span style="font-size: 14pt; color: rgb(50, 135, 18);">三、如何知道目前设备支持哪些LTE，NR频段</span></h2>
         <div><span style="font-size: 11pt;">     在“设备”页面可以看到支持的列表，勾选后选择右边的锁。</span><span style="font-size: 11pt;"><img
               src="img/Image1.png" type="image/png" data-filename="Image.png" /></span></div>
         <div><span style="font-size: 11pt;">  
@@ -55,9 +53,9 @@
         <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span style="font-size: 18pt;"> </span> 
         </div>
         <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"></div>
-        <h2><span style="font-size: 14pt; color: rgb(50, 135, 18);">四、列表显示正在加载怎么办</span></h2>
+        <h2><span style="font-size: 14pt; color: rgb(50, 135, 18);">四、列表显示正在加载怎么办或者设备无法获取到授权</span></h2>
         <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span style="font-size: 11pt;">   
-             确认是否是高通芯片，且已经ROOT及获取授权。如果都已经满足可能是新手机需要适配。</span></div>
+             如果是高通芯片确认ROOT及获取授权。华为设备请确认是否有HiAgent服务，且是鸿蒙2.0以下。如果都已经满足可能是新手机需要适配。</span></div>
         <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span style="font-size: 11pt;"><br /></span>
         </div>
         <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">
@@ -82,7 +80,7 @@
           <h2><span style="font-size: 14pt; color: rgb(50, 135, 18);-en-paragraph:true;">六、普通会员权益</span></h2>
         </div>
         <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span
-            style="font-size: 11pt;-en-paragraph:true;">    普通会员可以顺利使用锁频，锁网功能，没有广告打扰。</span></div>
+            style="font-size: 11pt;-en-paragraph:true;">    普通会员可以使用锁频，锁网功能（海思芯片5G除外），其他功能受限制。</span></div>
 
         <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><br /></div>
         <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><br /></div>
@@ -91,7 +89,7 @@
         </div>
         <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span
             style="-en-paragraph:true; font-size: 11pt;">
-            部分手机由于驱动或者权限问题导致无法正常使用，可以在设置里面尝试如下方法
+            部分手机由于驱动或者权限问题导致无法正常使用，可以在设置->强制功能里面尝试如下方法
           </span></div>
         <ol>
           <li>
@@ -102,7 +100,7 @@
           </li>
         </ol>
         <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"> 
-           <img src="img/Image.png" type="image/png" data-filename="Image.png" /></div>
+           <img src="img/ForceSetting.png" type="image/png" data-filename="ForceSetting.png" /></div>
 
         <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span
             style="font-size: 11pt;-en-paragraph:true;"><br /></span></div>
@@ -118,32 +116,14 @@
                 高级会员能无限制使用软件的全部功能，没有广告打扰</span></span></div>
         <ul>
           <li>
-            <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"> 任务测试 。</div>
-          </li>
-          <li>
-            <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"> 文件录制 。</div>
-          </li>
-          <li>
-            <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"> 内存回放（信令、事件、参数同步）。</div>
-          </li>
-          <li>
-            <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><span
-                style="font-size: unset; color: unset; font-family: unset;"> 文件回放 。</span></div>
-          </li>
-          <li>
-            <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">工参导入及基站连线，查询 。</div>
-          </li>
-          <li>
-            <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">批量信令导出（支持csv，pcap）。</div>
-          </li>
-          <li>
-            <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">单条信令查看，导出 。</div>
-          </li>
-          <li>
-            <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">信令，事件双卡分离 。</div>
-          </li>
-          <li>
-            <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">地图轨迹导出（支持csv，kml）。</div>
+            <div><span style="font-size: 11pt;">室内室外测试，测试计划配置。</span></div>
+            <div><span style="font-size: 11pt;">LOG录制,KPI统计。</span></div>
+            <div><span style="font-size: 11pt;">内存回放（信令、事件、参数同步。</span></div>
+            <div><span style="font-size: 11pt;">工参导入及基站连线，查询。</span></div>
+            <div><span style="font-size: 11pt;">批量信令导出（支持csv，pcap）。</span></div>
+            <div><span style="font-size: 11pt;">单条信令查看，导出。</span></div>
+            <div><span style="font-size: 11pt;">信令，事件双卡分离。</span></div>
+            <div><span style="font-size: 11pt;">地图轨迹不限时间导出（支持csv，kml）。</span></div>
           </li>
         </ul>
         </br>
@@ -162,10 +142,12 @@
             <li>
               <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">权限管理中定位选择“始终允许”。</div>
             </li>
+            <li>
+              <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">没有这个选项请联系作者。</div>
+            </li>
           </ol>
 
           <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;">  
-            <img src="img/Image4.png" type="image/png" data-filename="Image.png" width="257" />
             <img src="img/Image5.png" type="image/png" data-filename="Image.png" width="285" /><br />
           </div>
           <div style="margin-top: 1em;margin-bottom: 1em;-en-paragraph:true;"><br /></div>
