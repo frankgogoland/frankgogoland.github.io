@@ -87,7 +87,7 @@
             -ms-touch-action: manipulation;
             touch-action: manipulation;
             height: 32px;
-            padding: 0 10px;
+            padding: 0 5px;
             font-size: 14px;
             border-radius: 4px;
             color: rgba(0, 0, 0, 0.65);
