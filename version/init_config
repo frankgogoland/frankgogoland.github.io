@@ -17,10 +17,10 @@
     "play": 50,
     "cool": 50,
     "apk_version": 50,
-    "apk_cn": "https://frankgogoland.github.io/version/CellularPro-cellular-xiaomi-release_1693_jiagu_sign.apk",
+    "apk_cn": "https://frankgogoland.github.io/version/CellularPro_1.7.7_xiaomi-protect-signed.apk",
     "apk_cn_md5": "f3502d9d3c68c4f04db26e9f72d224ce",
-    "info_cn": "修改权限申请方式\n增加HTTP文件上传\n合并KML文件",
-    "info_en": "修改权限申请方式"
+    "info_cn": "1、适配晓龙8GEN3\n2、修复4G定点RSRP抖动问题\n3、调整室内地图执行逻辑\n4、修复KPI统计BUG",
+    "info_en": "1、适配晓龙8GEN3\n2、修复4G定点RSRP抖动问题\n3、调整室内地图执行逻辑\n4、修复KPI统计BUG"
   },
   "auditing": {
     "xiaomi": "1.7.7",
