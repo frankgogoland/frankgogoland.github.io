@@ -23,7 +23,7 @@
     "info_en": "1、适配晓龙8GEN3\n2、修复4G定点RSRP抖动问题\n3、调整室内地图执行逻辑\n4、修复KPI统计BUG"
   },
   "auditing": {
-    "xiaomi": "1.7.7",
+    "xiaomi": "1.6.0",
     "huawei": "1.6.0",
     "baidu": "1.6.0"
   },
