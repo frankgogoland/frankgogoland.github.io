@@ -31,7 +31,7 @@
     "use_plugin" : 0,
     "gplay_use_plugin" : 0,
     "native_url" : "http://c.speedtest.net/speedtest-servers-static.php",
-    "plug_url":"https://cellular.speedtestcustom.com"
+    "plugin_url":"https://cellular.speedtestcustom.com"
   },
   "scs":{
     "78":1,
