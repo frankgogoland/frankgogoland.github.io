@@ -26,7 +26,7 @@
     "xiaomi": "1.6.0",
     "huawei": "1.6.0",
     "baidu": "1.6.0",
-    "oppo": "1.8.0"
+    "oppo": "1.6.0"
   },
   "speedtest":{
     "use_plugin" : 0,
