@@ -6,7 +6,7 @@
   "loc_all": "b",
   "map_vendor":1, 
   "haikang_5g":1,
-  "show_map_logo":1,
+  "show_map_logo":0,
   "@map_vendor":"1=manual; 2=mapbox;3=baidu",
   "version": {
     "cancelable_min": 20,
