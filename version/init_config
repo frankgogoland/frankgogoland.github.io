@@ -12,17 +12,17 @@
   "version": {
     "cancelable_min": 20,
     "cancelable_max": 1000,
-    "xiaomi": 50,
+    "xiaomi": 92,
     "huawei": 50,
     "oppo": 50,
-    "vivo": 50,
+    "vivo": 92,
     "play": 50,
-    "cool": 50,
+    "cool": 92,
     "apk_version": 50,
     "apk_cn": "https://frankgogoland.github.io/version/CellularPro_1.7.7_xiaomi-protect-signed.apk",
     "apk_cn_md5": "f3502d9d3c68c4f04db26e9f72d224ce",
-    "info_cn": "1、适配晓龙8GEN3\n2、修复4G定点RSRP抖动问题\n3、调整室内地图执行逻辑\n4、修复KPI统计BUG",
-    "info_en": "1、适配晓龙8GEN3\n2、修复4G定点RSRP抖动问题\n3、调整室内地图执行逻辑\n4、修复KPI统计BUG"
+    "info_cn": "1、完善DTLOG/CU的事件帧\n2、增加室内回放\n3、修复已知的高通芯片解码崩溃\n4、修复海思芯片解码BUG",
+    "info_en": "1、完善DTLOG/CU的事件帧\n2、增加室内回放\n3、修复已知的高通芯片解码崩溃\n4、修复海思芯片解码BUG"
   },
   "auditing": {
     "xiaomi": "1.6.0",
