@@ -11,7 +11,7 @@
   "@map_vendor":"1=manual; 2=mapbox;3=baidu",
   "version": {
     "cancelable_min": 20,
-    "cancelable_max": 1000,
+    "cancelable_max": 20,
     "xiaomi":88,
     "huawei":88,
     "oppo": 50,
