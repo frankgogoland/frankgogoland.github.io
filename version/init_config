@@ -8,6 +8,7 @@
   "haikang_5g":1,
   "show_map_logo":0,
   "show_order_hint":1,
+  "report_check_result":1
   "@map_vendor":"1=manual; 2=mapbox;3=baidu",
   "version": {
     "cancelable_min": 20,
