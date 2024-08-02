@@ -465,7 +465,7 @@
             <font style="font-family: Calibri; color: rgb(241, 179, 52);"><b> 6.1 Import</b></font>
           </span></h3>
         <div style="min-height: 30pt; text-align: left;">
-          <font face="Calibri"><img src="function/add_icon.png" type="image/png" data-filename="Image.png" width="30" height="30" />
+          <font face="Calibri"><img src="function/add_icon.png" type="image/png" data-filename="Image.png" width="46" />
             <span style="min-height: 30pt; font-size: 11.5pt; color: rgb(206, 206, 206);">import cell database from CSV
               files</span></font>
         </div>
