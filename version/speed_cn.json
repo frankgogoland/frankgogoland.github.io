@@ -15,6 +15,21 @@
         "host": "speedtest1.ah163.com:8080",
         "force_ping_select": 1
       },
+      {
+        "url": "http://speedtest.139play.com:8080/speedtest/upload.php",
+        "lat": "30.2741",
+        "lon": "120.1552",
+        "distance": 632,
+        "name": "Hangzhou",
+        "country": "China",
+        "cc": "CN",
+        "sponsor": "浙江移动-杭州",
+        "id": "45170",
+        "preferred": 0,
+        "https_functional": 1,
+        "host": "speedtest1.ah163.com:8080",
+        "force_ping_select": 1
+      },
     {
       "url": "http://speedtest2.niutk.com:8080/speedtest/upload.php",
       "lat": "31.4912",
