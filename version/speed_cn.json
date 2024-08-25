@@ -1,4 +1,20 @@
+
 [
+    {
+        "url": "http://speedtest1.ah163.com:8080/speedtest/upload.php",
+        "lat": "31.8667",
+        "lon": "117.2833",
+        "distance": 632,
+        "name": "Hefei",
+        "country": "China",
+        "cc": "CN",
+        "sponsor": "安徽电信-合肥",
+        "id": "45170",
+        "preferred": 0,
+        "https_functional": 1,
+        "host": "speedtest1.ah163.com:8080",
+        "force_ping_select": 1
+      },
     {
       "url": "http://speedtest2.niutk.com:8080/speedtest/upload.php",
       "lat": "31.4912",
