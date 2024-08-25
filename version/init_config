@@ -37,7 +37,7 @@
     "use_plugin" : 0,
     "gplay_use_plugin" : 0,
     "speed_url" : "https://www.speedtest.net/api/js/servers?engine=js",
-    "speed_cn" : "https://frankgogoland.github.io/version/speed_cn.json",
+    "speed_cn" :  "https://www.speedtest.net/api/js/servers?engine=js",
     "native_url" : "http://c.speedtest.net/speedtest-servers-static.php",
     "plugin_url":"https://cellular.speedtestcustom.com"
   },
