@@ -1,0 +1,22 @@
+<settings>
+<servers>
+<server url="http://cesu-hz.zjtelecom.com.cn:8080/speedtest/upload.php" lat="30.2741" lon="120.1552" name="HangZhou" country="China" cc="CN" sponsor="浙江电信" id="59386" host="cesu-hz.zjtelecom.com.cn:8080"/>
+<server url="http://mycuspeed.169ol.com:8080/speedtest/upload.php" lat="31.4554" lon="104.6693" name="Mianyang" country="China" cc="CN" sponsor="China Unicom" id="64638" host="mycuspeed.169ol.com:8080"/>
+<server url="http://cuscspeed.169ol.com:8080/speedtest/upload.php" lat="30.6586" lon="104.0647" name="Chengdu" country="China" cc="CN" sponsor="ChinaUnicom Sichuan" id="64314" host="cuscspeed.169ol.com:8080"/>
+<server url="https://speedtest.dukekunshan.edu.cn:8080/speedtest/upload.php" lat="31.19" lon="120.37" name="Chengdu" country="China" cc="CN" sponsor="江苏教育网" id="412835" host="speedtest.dukekunshan.edu.cn:8080"/>
+<server url="http://node-124-160-78-98.speedtest.cn:51080/speedtest/upload.php" lat="30.275258" lon="120.176041" name="Hangzhou" country="China" cc="CN" sponsor="浙江联通" id="412835" host="node-124-160-78-98.speedtest.cn:51080"/>
+<server url="http://speedtest.wasu.cn:8080/speedtest/upload.php" lat="30.16" lon="120.176041" name="Hangzhou" country="China" cc="CN" sponsor="浙江电信" id="412835" host="speedtest.wasu.cn:8080"/>
+<server url="https://node-59-175-206-86.speedtest.cn:51090/speedtest/upload.php" lat="30.545575" lon="114.339263" name="Wuhan" country="China" cc="CN" sponsor="湖北电信" id="412835" host="node-59-175-206-86.speedtest.cn:51090"/>
+<server url="https://vipspeedtest8.wuhan.net.cn:8080/speedtest/upload.php" lat="30.545575" lon="114.339263" name="Wuhan" country="China" cc="CN" sponsor="湖北电信2" id="412835" host="vipspeedtest8.wuhan.net.cn:8080"/>
+<server url="https://node-36-250-1-90.speedtest.cn:51090/speedtest/upload.php" lat="26.060537" lon="119.245519" name="Fuzhou" country="China" cc="CN" sponsor="福建电信" id="412835" host="node-36-250-1-90.speedtest.cn:51090"/>
+<server url="https://node-124-93-198-18.speedtest.cn:51090/speedtest/upload.php" lat="38.925486" lon="121.63966" name="Dalian" country="China" cc="CN" sponsor="辽宁电信" id="412835" host="node-124-93-198-18.speedtest.cn:51090"/>
+<server url="https://node-218-26-162-114.speedtest.cn:51090/speedtest/upload.php" lat="37.86006" lon="112.56086" name="Taiyuan" country="China" cc="CN" sponsor="山西联通" id="412835" host="node-124-93-198-18.speedtest.cn:51090"/>
+<server url="http://speedtest1.sc.189.cn.prod.hosts.ooklaserver.net:8080/speedtest/upload.php" lat="30.4" lon="104.04" name="Chengdu" country="China" cc="CN" sponsor="四川电信" id="412835" host="node-124-93-198-18.speedtest.cn:51090"/>
+<server url="http://speedtest1.sc.189.cn:8080/speedtest/upload.php" lat="30.4" lon="104.04" name="Chengdu" country="China" cc="CN" sponsor="四川联通1" id="412835" host="node-124-93-198-18.speedtest.cn:51090"/>
+<server url="https://cuscspeed.169ol.com.prod.hosts.ooklaserver.net:8080/speedtest/upload.php" lat="30.4" lon="104.04" name="Chengdu" country="China" cc="CN" sponsor="四川联通2" id="412835" host="node-124-93-198-18.speedtest.cn:51090"/>
+<server url="https://node-125-76-88-10.speedtest.cn:51090/speedtest/upload.php" lat="36.060587" lon="103.889147" name="Lanzhou" country="China" cc="CN" sponsor="甘肃电信" id="412835" host="node-124-93-198-18.speedtest.cn:51090"/>
+<server url="http://node-111-42-93-106.speedtest.cn:51080/speedtest/upload.php" lat="45.44" lon="126.36" name="Suihua" country="China" cc="CN" sponsor="黑龙江广电" id="412835" host="node-124-93-198-18.speedtest.cn:51090"/>
+<server url="http://node-111-42-93-105.speedtest.cn:51090/speedtest/upload.php" lat="45.44" lon="126.36" name="Suihua" country="China" cc="CN" sponsor="黑龙江广电" id="412835" host="node-124-93-198-18.speedtest.cn:51090"/>
+<server url="http://hntelecom5g.cn:8080/speedtest/upload.php" lat="28.12" lon="112.59" name="Changsha" country="China" cc="CN" sponsor="湖南电信" id="412835" host="node-124-93-198-18.speedtest.cn:51090"/>
+</servers>
+</settings>
