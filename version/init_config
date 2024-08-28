@@ -31,7 +31,7 @@
     "huawei": "1.6.0",
     "baidu": "1.6.0",
     "oppo": "1.8.4",
-    "vivo": "1.8.4.1"
+    "vivo": "1.6.0"
   },
   "speedtest":{
     "use_plugin" : 0,
