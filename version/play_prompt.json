@@ -1,0 +1,22 @@
+[
+  {
+    "id": "google",
+    "prompt":"Sorry, the app needs to exit due to its low version. Please download the latest version from the store. thank you",
+    "online":true,
+    "new_id":"",
+    "reason":"",
+    "force_exit":true
+  },
+  {
+    "id": "make.more.r2d2.play.cellular_pro",
+    "prompt":"",
+    "online":true,
+    "new_id":""
+  },
+  {
+    "remark":"该文件是google版本控制的描述，当app版本低于限制的时候进行处理，如果online在线则是简单的升级，如果不在线则看看new_id是否有效，如果有效则跳转过去,此文件仅仅是为了给用户一个友好的提示"
+  } 
+]
+
+  
+{"id":"google","prompt":"Sorry, the app needs to exit due to its low version. Please download the latest version from the store. thank you","online":false,"new_id":"make.more.r2d2.play.celluar_pro","reason":"","policy":1}
