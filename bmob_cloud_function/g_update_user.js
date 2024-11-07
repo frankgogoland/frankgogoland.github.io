@@ -52,7 +52,5 @@ function onRequest (request, response, modules) {
     "data":{"utdid":utdid,"imei":imei,"version":version,"serviceCodeUpdate":serviceCodeUpdate}
   },function(err,data){
         response.send(data); // {"updatedAt":"2023-03-05 15:14:58"}
-      else
-        response.send(err);
   });
-}                                                                                    
+}

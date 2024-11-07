@@ -53,7 +53,8 @@ function onRequest(request, response, modules) {
       "objectId":"",   //对象属性
       "utdid":"",
       "uuid":"",
-      "nrForce":false
+      "nrForce":false,
+      "extra_config":0
   };
   
   //objectId 不存在，此时需要根据utdid,vaid等信息进行匹配(不包括IMEI)
@@ -134,12 +135,14 @@ function onRequest(request, response, modules) {
                      _result.code="A002"; //找不到记录
                      _result.info= "not found user information";
                     response.send(_result);
+                    return;
                 }
                 if (dataObject.uuid == "002") {
                    _result.code = "A005";
                    _result.objectId = dataObject.objectId;
                    _result.info = "user has been blocked";
                    response.send(_result);
+                   return;
                } 
                 //response.send(dataObject);
                 var day = dataObject.day;
@@ -175,6 +178,7 @@ function onRequest(request, response, modules) {
                               _result.utdid = utdid;
                               _result.uuid = uuid;
                               _result.nrForce = dataObject.nrForce;
+                              _result.extra_config = dataObject.extra_config;
                               response.send(_result);
                             }else {
                                 _result.code = "A003";
@@ -208,11 +212,13 @@ function onRequest(request, response, modules) {
       var dataObject= JSON.parse(data);
      // response.end("err = " + dataObject.error + ",data = " + data);
       if(dataObject.error === undefined){
-            if (dataObject.uuid == "002") {
+            if (dataObject.uuid === "002"  || objectId === "ab9594c45f" || dataObject.utdid === "6B961D2285C71E43"  
+            || dataObject.imei0 === "866263051138474" || dataObject.utdid === "824881791969C701") {
                 _result.code = "A005";
                 _result.objectId = objectId;
                 _result.info = "user has been blocked";
                 response.send(_result);
+                return;
             } 
             if (vaid === undefined) vaid = "";
             if (imei0 === undefined) imei0 = "";
@@ -248,8 +254,9 @@ function onRequest(request, response, modules) {
                                           _result.updatedAt = _dataObject.updatedAt;
                                           _result.expireDate = expireDate.format('YYYY-MM-DD');
                                           _result.uuid = dataObject.uuid;
-                                          _result.utdid = dataObject.utdid;
+                                          _result.utdid = utdid;
                                           _result.nrForce = dataObject.nrForce;
+                                          _result.extra_config = dataObject.extra_config;
                                           response.send(_result);
                                         }else {
                                               _result.code = "A003";

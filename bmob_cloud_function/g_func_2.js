@@ -1,4 +1,4 @@
-/*Google用户购买会员后的处理
+/*Google用户购买会员后的处理,代替g_vip_member_process
  */ 
 function onRequest(request, response, modules) {
     // private String orderId;//订单号,"GPA.3346-9427-6870-84300
@@ -14,57 +14,64 @@ function onRequest(request, response, modules) {
     // private String phoneModel;
     // private String country;
     // private String zzc;
-    
+           
     var db = modules.oData;
     var functions = modules.oFunctions;
     var Bql = modules.oBql;
     var httpType = request.method;
-    var orderId;
-    var packageName;
-    var productId;
-    var purchaseTime;
-    var purchaseTimeDesc;
-    var purchaseState;
+    var orderId; //aa
+    var packageName; //ee
+    var productId; //ff
+    var purchaseTime; //kk
+    var purchaseTimeDesc; //mm
+    var purchaseState; //ll
     var purchaseToken;
-    var utdid;
-    var imei;
-    var version;
-    var phoneModel;
-    var country;
-    var zzc;
-    var serviceCodeUpdate;
+    var utdid; //cc
+    var imei; //bb
+    var version; //jj
+    var phoneModel; //dd
+    var country; //ii
+    var zzc; //gg
+    var serviceCodeUpdate; //hh
     
    if ("GET" == httpType) {
-       orderId = request.query.orderId;
-       packageName = request.query.packageName;
-       productId = request.query.productId;
-       purchaseTime = request.query.purchaseTime;
-       purchaseTimeDesc = request.query.purchaseTimeDesc;
-       purchaseState = request.query.purchaseState;
+       orderId = request.query.aa;
+       packageName = request.query.ee;
+       productId = request.query.ff;
+       purchaseTime = request.query.kk;
+       purchaseTimeDesc = request.query.mm;
+       purchaseState = request.query.ll;
        purchaseToken = request.query.purchaseToken;
-       utdid = request.query.utdid;
-       imei = request.query.imei;
-       version = request.query.version;
-       phoneModel = request.query.phoneModel;
-       country = request.query.country;
-       zzc = request.query.zzc;
-       serviceCodeUpdate = request.query.serviceCodeUpdate;
+       utdid = request.query.cc;
+       imei = request.query.bb;
+       version = request.query.jj;
+       phoneModel = request.query.dd;
+       country = request.query.ii;
+       zzc = request.query.gg;
+       serviceCodeUpdate = request.query.hh;
     
    }else {
-       orderId = request.body.orderId;
-       packageName = request.body.packageName;
-       productId = request.body.productId;
-       purchaseTime = request.body.purchaseTime;
-       purchaseTimeDesc = request.body.purchaseTimeDesc;
-       purchaseState = request.body.purchaseState;
+       orderId = request.body.aa;
+       packageName = request.body.ee;
+       productId = request.body.ff;
+       purchaseTime = request.body.kk;
+       purchaseTimeDesc = request.body.mm;
+       purchaseState = request.body.ll;
        purchaseToken = request.body.purchaseToken;
-       utdid = request.body.utdid;
-       imei = request.body.imei;
-       version = request.body.version;
-       phoneModel = request.body.phoneModel;
-       country = request.body.country;
-       zzc = request.body.zzc;
-       serviceCodeUpdate = request.body.serviceCodeUpdate;
+       utdid = request.body.cc;
+       imei = request.body.bb;
+       version = request.body.jj;
+       phoneModel = request.body.dd;
+       country = request.body.ii;
+       zzc = request.body.gg;
+       serviceCodeUpdate = request.body.hh;
+       productId =  Buffer.from(productId, 'base64').toString('utf-8');
+       packageName =   Buffer.from(packageName, 'base64').toString('utf-8');
+       utdid =  Buffer.from(utdid, 'base64').toString('utf-8');
+       country =  Buffer.from(country, 'base64').toString('utf-8');
+       zzc =  Buffer.from(zzc, 'base64').toString('utf-8');
+       orderId =  Buffer.from(orderId, 'base64').toString('utf-8');
+       phoneModel =  Buffer.from(phoneModel, 'base64').toString('utf-8');
    }
    if (purchaseTime === undefined || purchaseTime === null) purchaseTime = 0;
    if (purchaseState === undefined || purchaseState === null) purchaseState = 0;

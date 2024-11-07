@@ -31,6 +31,7 @@ function onRequest(request, response, modules) {
   var phone;
   var phoneModel;
   var chipset;
+  var member_property;
   
    if ("GET" == httpType) {
       // objectId = request.query.objectId;
@@ -49,6 +50,7 @@ function onRequest(request, response, modules) {
        order = request.query.order;
        phoneModel = request.query.phoneModel;
        chipset = request.query.chipset;
+       member_property = request.query.member_property;
 
    }else {
        //objectId = request.body.objectId;
@@ -67,6 +69,7 @@ function onRequest(request, response, modules) {
        order = request.body.order;
        phoneModel = request.body.phoneModel;
        chipset = request.body.chipset;
+       member_property = request.body.member_property;
    }
   //  response.end("vaid = " + vaid);
    if (vaid === undefined) vaid = "";
@@ -83,6 +86,7 @@ function onRequest(request, response, modules) {
    if (phone === undefined) phone = "";
    if (utdid === undefined) utdid = "";
    if (chipset === undefined) chipset = 1;
+   if (member_property === undefined) member_property = "";
     var _result = {
       "code":"", //错误码,A001,A002,A003,A003,A004,A005,A1024
       "info":"",
@@ -93,20 +97,15 @@ function onRequest(request, response, modules) {
       "utdid":"",
       "uuid":""
   };
-  if (imei0 === "866263051138474") { //阻止破解的人购买
-      _result.code = "A005";
-      _result.objectId = objectId;
-      _result.info = "user has been blocked";
-      response.send(_result);
-      return;
-  } 
+   
    //GET UUID
      var functions = modules.oFunctions;
        functions.run({
           "name": "generateUUID",
           "data":null
         },function(err,data){
-          uuid = data;     
+         // uuid = data;     
+         uuid = "1024";
           var moment = modules.oMoment;
           var createdAt = moment();//.format('YYYY-MM-DD HH:mm:ss')
           var expireDate =  createdAt.add(day, 'days').add(month, 'months').format('YYYY-MM-DD HH:mm:ss');
@@ -118,7 +117,7 @@ function onRequest(request, response, modules) {
             "table":"VipInfo",
             "data":{"utdid":utdid,"uuid":uuid,"imei0":imei0,"imei1":imei1,"imei":imei,"version":version,
             "vaid":vaid,"month":Number(month),"day":Number(day),"member_type":member_type,"chipset":Number(chipset),
-            "city":city,"phone":phone,"order":order,'phoneModel':phoneModel,'expireDate':expireDate}
+            "city":city,"phone":phone,"order":order,'phoneModel':phoneModel,'expireDate':expireDate,'member_property':member_property}
           },function(err,data){
               var dataObject= JSON.parse(data);
               if (dataObject.code !== undefined){ //插入数据错误

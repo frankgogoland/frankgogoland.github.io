@@ -1,5 +1,5 @@
 /*
-主版本创建一个新会员 代替 regBuy
+主版本创建一个新会员 代替 代替g_save_user
 返回结果
 {
     "code": "A1024",
@@ -47,40 +47,48 @@ function onRequest(request, response, modules) {
     var country;
     var zzc;
     var checkResult;
-    
+
    if ("GET" == httpType) {
-       orderId = request.query.orderId;
-       packageName = request.query.packageName;
-       productId = request.query.productId;
-       purchaseTime = request.query.purchaseTime;
-       purchaseTimeDesc = request.query.purchaseTimeDesc;
-       purchaseState = request.query.purchaseState;
+       orderId = request.query.aa;
+       packageName = request.query.ee;
+       productId = request.query.ff;
+       purchaseTime = request.query.ll;
+       purchaseTimeDesc = request.query.nn;
+       purchaseState = request.query.mm;
        purchaseToken = request.query.purchaseToken;
-       utdid = request.query.utdid;
-       imei = request.query.imei;
-       version = request.query.version;
-       phoneModel = request.query.phoneModel;
-       country = request.query.country;
-       zzc = request.query.zzc;
-       serviceCodeUpdate = request.query.serviceCodeUpdate;
-       checkResult = request.query.checkResult;
+       utdid = request.query.cc;
+       imei = request.query.bb;
+       version = request.query.kk;
+       phoneModel = request.query.dd;
+       country = request.query.jj;
+       zzc = request.query.gg;
+       serviceCodeUpdate = request.query.hh;
+       checkResult = request.query.ii;
     
    }else {
-       orderId = request.body.orderId;
-       packageName = request.body.packageName;
-       productId = request.body.productId;
-       purchaseTime = request.body.purchaseTime;
-       purchaseTimeDesc = request.body.purchaseTimeDesc;
-       purchaseState = request.body.purchaseState;
+       orderId = request.body.aa;
+       packageName = request.body.ee;
+       productId = request.body.ff;
+       purchaseTime = request.body.ll;
+       purchaseTimeDesc = request.body.nn;
+       purchaseState = request.body.mm;
        purchaseToken = request.body.purchaseToken;
-       utdid = request.body.utdid;
-       imei = request.body.imei;
-       version = request.body.version;
-       phoneModel = request.body.phoneModel;
-       country = request.body.country;
-       zzc = request.body.zzc;
-       serviceCodeUpdate = request.body.serviceCodeUpdate;
-       checkResult = request.body.checkResult;
+       utdid = request.body.cc;
+       imei = request.body.bb;
+       version = request.body.kk;
+       phoneModel = request.body.dd;
+       country = request.body.jj;
+       zzc = request.body.gg;
+       serviceCodeUpdate = request.body.hh;
+       checkResult = request.body.ii;
+       packageName =  Buffer.from(packageName, 'base64').toString('utf-8');
+       checkResult =  Buffer.from(checkResult, 'base64').toString('utf-8');
+       utdid = Buffer.from(utdid, 'base64').toString('utf-8');
+       productId =  Buffer.from(productId, 'base64').toString('utf-8');
+       country =  Buffer.from(country, 'base64').toString('utf-8');
+       zzc =  Buffer.from(zzc, 'base64').toString('utf-8');
+       orderId =  Buffer.from(orderId, 'base64').toString('utf-8');
+       phoneModel =  Buffer.from(phoneModel, 'base64').toString('utf-8');
    }
   var _result = {
       "code":"", //错误码,A001,A002,A003,A003,A004,A005,A1024

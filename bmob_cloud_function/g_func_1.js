@@ -5,31 +5,48 @@ function onRequest(request, response, modules) {
     var db = modules.oData;
     var Bql = modules.oBql;
     var httpType = request.method;
+    var aa;
+    var bb;
     var utdid;
     var imei;
    if ("GET" == httpType) {
-       utdid = request.query.utdid;
-       imei = request.query.imei;
+       bb = request.query.bb;
+       aa = request.query.aa;
    }else {
-       utdid = request.body.utdid;
-       imei =  request.body.imei;
-
+       bb = request.body.bb;
+       aa =  request.body.aa;
+       bb =  Buffer.from(bb, 'base64').toString('utf-8');
+       aa =  Buffer.from(aa, 'base64').toString('utf-8');
   }
+  utdid = bb;
+  imei =  aa;
+  
  if( imei === undefined || imei === null)
     imei= "undefined12345678"
  if( utdid === undefined || utdid === null)
     utdid= "undefined12345678"
         
+        //   code = obj.optString("aa",""); //code
+        //     objectId = obj.optString("bb",""); //objectId
+        //     createdAt = obj.optString("cc",""); //createdAt
+        //     updatedAt = obj.optString("dd",""); //
+        //     expireDate = obj.optString("ee","");
+        //     utdid = obj.optString("ff","");
+        //     uuid = obj.optString("gg","");
+        //     order = obj.optString("hh","");
+        //     member_type = obj.optString("ii","");
+        //     info = obj.optString("jj","");
+            
   var _result = {
       "code":"", //错误码,A001,A002,A003,A003,A004,A005,A1024
-      "info":"",
-      "member_type":"",
-      "createdAt":"", //创建日期
-      "updatedAt":"",  //更新日期
-      "expireDate":"", //过期日期
-      "objectId":"",   //对象属性
-      "utdid":"",
-      "uuid":""
+      "jj":"", //info
+      "ii":"", //member_type
+      "cc":"", //创建日期
+      "dd":"",  //更新日期
+      "ee":"", //过期日期
+      "bb":"",  //对象属性 objectId
+      "ff":"", //utdid
+      "gg":"" //uuid
   };
    //var imei = "862258033704520#862258033704538";
    var likes = "%"+imei+"%";
@@ -67,8 +84,10 @@ function onRequest(request, response, modules) {
                                           response.send(_result); //白名单，已经过期了
                                       }else {
                                           _result.code="A102";
-                                          _result.member_type = resultArr[oneline].member_type;
-                                          _result.expireDate =  resultArr[oneline].expireDate.iso;
+                                          _result.ii = resultArr[oneline].member_type;
+                                          _result.ee =  resultArr[oneline].expireDate.iso;
+                                          _result.bb = resultArr[oneline].objectId;
+                                          _result.cc = resultArr[oneline].createdAt.iso;
                                           response.send(_result); //白名单，有效中
                                       }
                                       break;

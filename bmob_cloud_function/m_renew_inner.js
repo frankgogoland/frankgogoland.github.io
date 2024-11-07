@@ -21,6 +21,7 @@ function onRequest(request, response, modules) {
     var order;
     var version;
     var phoneModel;
+    var member_property;
    if ("GET" == httpType) {
        utdid = request.query.utdid;
        objectId = request.query.objectId;
@@ -30,6 +31,7 @@ function onRequest(request, response, modules) {
        order = request.query.order;
        version = request.query.version;
        phoneModel = request.query.phoneModel;
+       member_property = request.query.member_property;
     }else {
         utdid = request.body.utdid;
        objectId = request.body.objectId;
@@ -39,9 +41,11 @@ function onRequest(request, response, modules) {
        order = request.body.order;
        version = request.body.version;
        phoneModel = request.body.phoneModel;
+       member_property = request.body.member_property;
    }
    if (day === undefined) day = 0;
    if (month === undefined) month = 0;
+   if (member_property === undefined) member_property = "";
    
    var _result = {
        "code":"", //错误码,A001,A002,A003,A003,A004,A005,A1024
@@ -60,6 +64,16 @@ function onRequest(request, response, modules) {
        _result.info = "need member_type";
        response.send(_result);
    }
+//   order = "GPA.33"
+//   if (order.startsWith("GPA.33")) {
+//         _result.code = "A002"
+//         _result.info = "error";
+//         response.send(_result);
+//   }else {
+//         _result.code = "A004"
+//         _result.info = "error";
+//         response.send(_result);
+//   }
 
   db.findOne({
     "table":"VipInfo",
@@ -133,14 +147,15 @@ function onRequest(request, response, modules) {
         },function(err,data){
           //回调函数
         var uuid = data;
-      //  if (hasExpired === 1) uuid = "1024"
+       if (hasExpired === 1) uuid = "1024"
         var createdAt = moment(dataObject.createdAt);//.format('YYYY-MM-DD HH:mm:ss')
         var expireDate = createdAt.add(_day, 'days').add(_month, 'months').format('YYYY-MM-DD HH:mm:ss');
        // response.end("need append diff days = " + diffDays + ",now month = " + _month + ",now day = " + _day + ",expireDate = " + expireDate);
         db.update({
         "table":"VipInfo",
         "objectId":objectId,
-        "data":{"day":_day,"month":_month,'member_type':member_type,'uuid':uuid,'order':_order,'phoneModel':phoneModel,'expireDate':expireDate,'version':version}
+        "data":{"day":_day,"month":_month,'member_type':member_type,'uuid':uuid,'order':_order,'phoneModel':phoneModel,
+        'expireDate':expireDate,'version':version,'member_property':member_property}
          },function(err,data){
           //   _dataObject= JSON.parse(data);
               if (data.code === undefined) {
