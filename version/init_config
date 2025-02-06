@@ -11,10 +11,10 @@
   "report_check_result":1,
   "show_siggcom":1,
   "bdposition_state":1,
+  "default_dns":"http://pro.cellularpro.cn/8/",
   "sec_policy":1,
   "sec_phone_model":"PKR110",
   "@bdposition_state":"baidu 定位1:enable,0:disable",
-   "@map_vendor":"1=manual; 2=mapbox;3=baidu",
   "version": {
     "cancelable_min": 85,
     "cancelable_max": 88,
