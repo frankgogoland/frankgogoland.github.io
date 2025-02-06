@@ -11,7 +11,7 @@
   "report_check_result":1,
   "show_siggcom":1,
   "bdposition_state":1,
-  "default_dns":"http://pro.cellularpro.cn/8/",
+  "default_dns":"http://propro.cellularpro.cn/8/",
   "sec_policy":1,
   "sec_phone_model":"PKR110",
   "@bdposition_state":"baidu 定位1:enable,0:disable",
