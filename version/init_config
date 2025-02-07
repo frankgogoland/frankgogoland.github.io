@@ -17,18 +17,18 @@
   "@bdposition_state":"baidu 定位1:enable,0:disable",
   "version": {
     "cancelable_min": 85,
-    "cancelable_max": 88,
+    "cancelable_max": 98,
     "xiaomi":88,
     "huawei":88,
     "oppo": 50,
     "vivo": 88,
     "play": 50,
-    "cool": 88,
+    "cool": 99,
     "apk_version": 50,
     "apk_cn": "https://frankgogoland.github.io/version/CellularPro_1.7.7_xiaomi-protect-signed.apk",
     "apk_cn_md5": "f3502d9d3c68c4f04db26e9f72d224ce",
-    "info_cn": "1、完善DTLOG/CU的事件帧\n2、增加室内回放\n3、修复已知的高通芯片解码崩溃\n4、修复海思芯片解码BUG",
-    "info_en": "1、完善DTLOG/CU的事件帧\n2、增加室内回放\n3、修复已知的高通芯片解码崩溃\n4、修复海思芯片解码BUG"
+    "info_cn": "1、修复会员认证问题",
+    "info_en": "1、修复会员认证问题"
   },
   "auditing": {
     "xiaomi": "1.6.0",
