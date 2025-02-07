@@ -31,7 +31,7 @@
     "info_en": "1、修复会员认证问题"
   },
   "auditing": {
-    "xiaomi": "1.6.0",
+    "xiaomi": "1.8.8",
     "huawei": "1.6.0",
     "baidu": "1.6.0",
     "oppo": "1.6.0",
