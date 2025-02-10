@@ -18,9 +18,9 @@
   "version": {
     "cancelable_min": 85,
     "cancelable_max": 98,
-    "xiaomi":88,
+    "xiaomi":99,
     "huawei":99,
-    "oppo": 50,
+    "oppo": 99,
     "vivo": 88,
     "play": 50,
     "cool": 99,
