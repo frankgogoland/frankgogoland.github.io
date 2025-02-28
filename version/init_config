@@ -14,7 +14,7 @@
   "default_dns":"http://pro.cellularpro.cn/8/",
   "sec_policy":1,
   "sec_phone_model":"PKR110",
-  "save_map_log":1,
+  "order_wait_time":240,
   "@bdposition_state":"baidu 定位1:enable,0:disable",
   "version": {
     "cancelable_min": 85,
@@ -36,7 +36,7 @@
     "huawei": "1.6.0",
     "baidu": "1.6.0",
     "oppo": "1.6.0",
-    "vivo": "1.6.0"
+    "vivo": "1.8.9"
   },
   "speedtest":{
     "use_plugin" : 0,
