@@ -1,4 +1,4 @@
 {
   "default_dns":"http://pro.cellularpro.cn/8/",
-  "limit_map":false
+  "limit_map":true
 }
