@@ -10,8 +10,8 @@ function onRequest(request, response, modules) {
       "preferenceKey":"#@#$$%%223345", //preference key 目前app没有用
       "trpayAppKey":"569e2cfd6c474aa0b2cfa1c08cde3821", // trpay key
       "trPayAppSecret":"appSceret=9829f1cba4994a0e80744524f7c28c97", //trpay secret
-      "ossAccessKeyId":"LTAIZBON0iBFmogC", //阿里云OSS访问key
-      "ossAccessKeySecret":"VtBqvQAlWjXfrSqszeHE5Xcs90q3o9", //阿里云OSS访问密钥
+      "ossAccessKeyId":"", //阿里云OSS访问key
+      "ossAccessKeySecret":"", //阿里云OSS访问密钥
       "hisiPolicy":0, //海思策略。0：不限制，1：全部限制，2：限制非会员，3：限制非高级会员。如果限制则不再初始化HiAgent
       "qualcommPolicy":0, //0: 不限制  1：全部限制  2：限制非会员 3：限制非高级会员。限制后不会初始化diag
       "price":"18:180:398:108:308:1028", //价格列表，月度普通，年度普通，终身普通普通，月度高级，季度高级，年度高级
