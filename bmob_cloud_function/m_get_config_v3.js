@@ -7,9 +7,9 @@ function onRequest(request, response, modules) {
       "minVersionCode":86, //最小支持的版本，如果版本低于这个版本会提示退出
       "supportHisiNrLock":false, //是否支持海思芯片锁5G，目前需要后台开通，不开通显示"开发中”
       "supportTrpay":true,  //支持Trpay提供的支付功能。如果false则不能使用支付功能
-      "preferenceKey":"#@#$$%%223345", //preference key 目前app没有用
-      "trpayAppKey":"569e2cfd6c474aa0b2cfa1c08cde3821", // trpay key
-      "trPayAppSecret":"appSceret=9829f1cba4994a0e80744524f7c28c97", //trpay secret
+      "preferenceKey":"", //preference key 目前app没有用
+      "trpayAppKey":"", // trpay key
+      "trPayAppSecret":"", //trpay secret
       "ossAccessKeyId":"", //阿里云OSS访问key
       "ossAccessKeySecret":"", //阿里云OSS访问密钥
       "hisiPolicy":0, //海思策略。0：不限制，1：全部限制，2：限制非会员，3：限制非高级会员。如果限制则不再初始化HiAgent
