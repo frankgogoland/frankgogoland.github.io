@@ -16,6 +16,7 @@
   "sec_phone_model":"PKR110,PKG110",
   "order_wait_time":240,
   "@bdposition_state":"baidu 定位1:enable,0:disable",
+  "priv_url":"http://www.cellularz.fun/pro/",
   "version": {
     "cancelable_min": 85,
     "cancelable_max": 98,
