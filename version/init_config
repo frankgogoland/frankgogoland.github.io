@@ -13,7 +13,7 @@
   "bdposition_state":1,
   "default_dns":"http://pro.cellularpro.cn/8/",
   "sec_policy":1,
-  "sec_phone_model":"PKR110,PKG110,PJE110,PJD110",
+  "sec_phone_model":"PKR110,PKG110,PJE110,PJF110,PJD110",
   "order_wait_time":240,
   "@bdposition_state":"baidu 定位1:enable,0:disable",
   "priv_url":"http://www.cellularz.fun/pro/",
