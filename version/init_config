@@ -17,6 +17,7 @@
   "order_wait_time":240,
   "@bdposition_state":"baidu 定位1:enable,0:disable",
   "priv_url":"http://www.cellularz.fun/pro/",
+
   "version": {
     "cancelable_min": 99,
     "cancelable_max": 101,
@@ -25,11 +26,13 @@
     "oppo": 99,
     "vivo": 99,
     "cool": 99,
+    "rongyao":99,
     "apk_version": 50,
     "apk_cn": "-",
     "apk_cn_md5": "f3502d9d3c68c4f04db26e9f72d224ce",
     "info_cn": "1、适配Android 16 2、修改累积的BUG",
-    "info_en": "1、适配Android 16 2、修改累积的BUG"
+    "info_en": "1、适配Android 16 2、修改累积的BUG",
+    "default_url":"https://sj.qq.com/appdetail/make.more.r2d2.cellular_pro?supply_id=2702800336&ocpc=0&platform=bing&account_id=300000000&landing_type=pcyyb&keyword_id=1726113027077&plan_id=1726113027077&group_id=1726113027077&creative_id=1726113027077&q=CellularPro&use_previous_query=1"
   },
   "auditing": {
     "xiaomi": "1.6.0",
