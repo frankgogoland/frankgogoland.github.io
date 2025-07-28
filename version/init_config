@@ -34,7 +34,7 @@
     "default_url":"https://a.app.qq.com/o/simple.jsp?pkgname=make.more.r2d2.cellular_pro"
   },
   "auditing": {
-    "xiaomi": "1.9.3",
+    "xiaomi": "1.6.0",
     "huawei": "1.6.0",
     "baidu": "1.6.0",
     "oppo": "1.6.0",
