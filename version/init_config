@@ -6,7 +6,7 @@
   "loc_all": "b",
   "map_vendor":3, 
   "haikang_5g":1,
-  "show_map_logo":0,
+  "show_map_logo":1,
   "show_order_hint":1,
   "report_check_result":1,
   "show_siggcom":1,
