@@ -35,7 +35,7 @@
   },
   "auditing": {
     "xiaomi": "1.6.5",
-    "huawei": "1.9.5",
+    "huawei": "1.6.0",
     "baidu": "1.9.5",
     "oppo": "1.6.0",
     "vivo": "1.6.0"
