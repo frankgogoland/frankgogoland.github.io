@@ -1,4 +1,42 @@
 {
   "default_dns":"http://pro.cellularpro.cn/8/",
-  "limit_map":true
+  "limit_map":true,
+ "video": [
+  {
+    "name": "Custom URL",
+    "url": ""
+  },
+  {
+    "name": "Apple 1080p HLS",
+    "url": "https://test-streams.mux.dev/x36xhzz/x36xhzz.m3u8"
+  },
+  {
+    "name": "Apple HLS BipBop",
+    "url": "https://devstreaming-cdn.apple.com/videos/streaming/examples/img_bipbop_adv_example_ts/master.m3u8"
+  },
+  {
+    "name": "BigBuckBunny 720p",
+    "url": "https://dash.akamaized.net/akamai/bbb_30fps/bbb_30fps.mpd"
+  },
+  {
+    "name": "Akamai DASH",
+    "url": "https://dash.akamaized.net/envivio/EnvivioDash3/manifest.mpd"
+  },
+  {
+    "name": "BigBuckBunny mp4",
+    "url": "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+  },
+  {
+    "name": "Google DASH",
+    "url": "https://storage.googleapis.com/shaka-demo-assets/angel-one/dash.mpd"
+  },
+  {
+    "name": "Baidu 720p",
+    "url": "http://bdcoud-media-player.cdn.bcebos.com/demovideo/all_mp4/720p.mp4"
+  },
+  {
+    "name": "Youtube",
+    "url": "https://youtu.be/t6ORDd4ZpXg?feature=shared"
+  }
+]
 }
