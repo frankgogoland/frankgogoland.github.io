@@ -34,11 +34,11 @@
     "default_url":"https://a.app.qq.com/o/simple.jsp?pkgname=make.more.r2d2.cellular_pro"
   },
   "auditing": {
-    "xiaomi": "1.6.0",
+    "xiaomi": "1.9.10",
     "huawei": "1.9.10",
     "baidu": "1.9.5",
     "oppo": "1.6.0",
-    "vivo": "1.6.0",
+    "vivo": "1.9.10",
     "honor": "1.9.10"
   },
   "speedtest":{
