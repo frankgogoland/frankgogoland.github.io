@@ -36,9 +36,9 @@
   "auditing": {
     "xiaomi": "1.9.11",
     "huawei": "1.6.0",
-    "baidu": "1.9.5",
+    "baidu": "1.6.0",
     "oppo": "1.6.0",
-    "vivo": "1.9.10",
+    "vivo": "1.6.0",
     "honor": "1.6.0"
   },
   "speedtest":{
