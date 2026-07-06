@@ -15,9 +15,6 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
-env:
-  ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
-
 jobs:
   deploy:
     environment:
@@ -28,21 +25,14 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-
       - name: Setup Pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@v5  # 👈 升级到 v5，完美原生适配 Node 24
 
       - name: Upload artifact
-        # 👈 核心修改：升级到 v4。新版在底层会使用全新的 ID 隔离，不会再把之前的 4 个历史包扯进来
-        uses: actions/upload-pages-artifact@v4
+        uses: actions/upload-pages-artifact@v3 # 👈 恢复到稳定版 v3
         with:
           path: '.'
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
-        # Force Fresh Run
