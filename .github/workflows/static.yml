@@ -37,11 +37,10 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+        # 👈 核心修改：升级到 v4。新版在底层会使用全新的 ID 隔离，不会再把之前的 4 个历史包扯进来
+        uses: actions/upload-pages-artifact@v4
         with:
           path: '.'
-          # 👈 核心修复：如果由于网络重试导致产生了多个包，直接覆盖，只保留最新一个！
-          overwrite: true 
 
       - name: Deploy to GitHub Pages
         id: deployment
