@@ -15,7 +15,6 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
-# 👈 核心修改：在全局强制允许使用安全的兼容 Node 版本，避开 Node 24 的底层 Bug
 env:
   ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
 
@@ -29,7 +28,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # 👈 增加一步：显式指定 Node 20 环境，确保 deploy-pages 插件 100% 稳定运行
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
@@ -42,6 +40,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: '.'
+          # 👈 核心修复：如果由于网络重试导致产生了多个包，直接覆盖，只保留最新一个！
+          overwrite: true 
 
       - name: Deploy to GitHub Pages
         id: deployment
